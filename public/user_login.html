@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf8">
+		<title>花语|登录</title>
+		<style>
+		  *{margin:0;padding:0}
+		  #body{
+			    width:100%; height:600px;background:url('BJ.jpg');
+
+		  }
+		  div.login{
+				width:358px;height:295px;
+				margin:12% auto;
+				border:1px solid rgba(232,232,232,1);
+				border-radius:7px;
+				background:#fff;
+				opacity:0.8;
+				padding:20px;
+
+       }
+       #mg,#mg1{
+			   width:273px;height:43px;
+			   float: left;
+			   border:1px solid #ddd;
+			   border-radius:3px;
+			   background:rgba(236,237,237,0.5);
+			   box-shadow:inset 0 -1px 4px #eee;
+			   color:#333;
+			   outline:none;
+			   box-sizing:border-box;
+			   padding:0 45px;
+				 margin:0 12%;
+			 }
+			 #mg{
+				background:url("../images/yonhu.png");
+        background-repeat:no-repeat;
+				background-position:6px 4px;
+
+			 }
+			 #mg1{
+				background:url("../images/mima.png");
+				background-repeat:no-repeat;
+				background-position:5px 4px;
+			 }
+			  #mig,#mig1{
+				 color:red;
+				 font-size:10px;
+				 padding-left:50%;
+			 }
+			  button{
+				 width:273px;height:43px;
+				 border:1px solid #ff6700;
+				 border-radius:3px;
+         font-family:Roboto;
+				 float:left;
+				 margin:0 5px;
+				 background:#ff6700;
+				 color:#fff;
+				 box-sizing:border-box;
+				 margin-top:20px;
+				 margin-left:12%;
+			  }
+			  .jinru{
+					width:273px;height:32px;
+				  box-sizing:border-box;
+					float:left;
+					margin-left:11%;
+				}
+        .jinru a{	
+		      color:#333;
+					text-decoration:none;
+					text-align:right;
+					font:13px Roboto;
+					
+				}
+				 .jinru label{
+			   font:13px Roboto;
+				 color:#333;
+				 }
+         .jinru label+span{
+					margin-left:28%;
+				 }
+				 .dsf{
+					clear:both;
+					font:13px Roboto;
+					color:#333;
+					margin-left:15%;
+				 }
+				.dsf1{
+					width:273px;height:43px;
+					display:flex;
+					justify-content:space-around;
+					padding:20px 40px;
+				} 
+				.dsf1 a{
+				  width:43px;height:43px;
+					background:url("dsf.png");
+					display:inline-block;
+					
+				}
+				a:first-child{background-position:-15px 3px;}
+				a:nth-child(2){background-position:-208px 3px;}
+        a:nth-child(3){background-position:-80px 3px;}
+        a:last-child{background-position:-144px 3px;}
+		</style>
+	</head>
+	<body>
+		 <iframe width="100%"height="220px" src="iframe.html"frameborder="0"scrolling="no">
+		 </iframe>
+		 <div id="body">
+			 <table></table>
+		 <div class="login">
+				<input id="mg" onblur="uname()"onfocus="mig_name()"placeholder="请输入手机号/用户名/邮箱" type="text">
+				<span id="mig"></span>
+			  <input  id="mg1"onblur="upwd()"onfocus="mig_upwd()" placeholder="请输入密码"type="password" name="upwd">
+		   <span id="mig1"></span>
+		   <button onclick="show()">
+					登录
+			 </button>
+       <div class="jinru">
+					<input id="jz"type="checkbox">
+					<label for="jz">记住我</label>
+					<span>
+	  				<a href="./user_register.html">
+						立即注册
+						</a>|<a href="">忘记密码？</a>
+					</span>
+			 </div>
+			 <div class="dsf">
+				——————其他方式登录——————
+			 </div>
+			 <div class="dsf1">
+				<a class="dsf3" href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+			 </div>
+		 </div>
+		 </div>
+	    <script>
+		   function show(){
+		  	var xhr=new XMLHttpRequest();
+		  	xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var result=xhr.responseText;
+						if(result==1){
+							alert("登陆成功");
+							return;
+						}
+						if(result==0){
+							alert("用户名或密码错误");
+							return;
+						}
+					}	
+			  }
+			  xhr.open("get","/user/v5/login/"+mg.value+"-"+mg1.value,true);
+			  xhr.send();
+		   }
+		   function mig_name(){
+				mig.innerHTML="用户名要6~12位";
+		   }
+			 function mig_upwd(){
+				mig1.innerHTML="密码要6~12位";
+			 }
+			 function uname(){
+				if(!mg.value)
+				mig.innerHTML="用户名不能为空";
+			 }
+			 function upwd(){
+				if(!mg1.value)
+         mig1.innerHTML="密码不能为空";
+			 }
+		   </script>
+			 <iframe width="100%"height="684px" src="buttomiframe.html"frameborder="0"scrolling="no">
+	</body>
+</html>

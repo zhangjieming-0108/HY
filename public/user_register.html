@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf8">
+		<title>花语|注册</title>
+		<style>
+			/*body{background-image:url("BJ.jpg")}*/
+		</style>
+	</head>
+	<body>
+	  <div>
+			<div>
+			 登录名称<input id="uname"type="text">
+			</div>
+			<div>
+				密码<input id="upwd" type="password">
+			</div>
+			<div>
+				邮箱<input id="email"type="email">
+			</div>
+			<div>
+				电话<input id="phone"type="text">
+			</div>
+			<div>
+				<input id="file"type="file">
+			</div>
+			<div>
+			  真实姓名<input id="user_name"type="text">
+			</div>
+			<div>
+			  性别<input id="sex"type="radio"name="gender"value="1"checked><label for="sex">男</label>
+				<input id="sex1"type="radio"name="gender"value="0">
+				<label for="sex1">女</label>
+			</div>
+			<div>
+				<input id="box"type="checkbox" >
+				<label for="box">我同意《用户手册》和《保密条款》</label>
+			</div>
+      <div>
+				<button onclick="postRegister()">注册</button>
+			</div>
+			<div>
+				<a href="user_login.html">
+					<button>已经有账号？请登录</button>
+				</a>
+			</div>
+			<div>
+				第三方账号登录: <img src="../images/TB.png" alt="图片已损坏">
+			</div>
+			<div>
+				用户注册/登录说明：
+			</div>
+			<div>
+				1、演示用户名：demouser；密码： demo1234
+			</div>
+			<div>
+				2、实际使用之前，需配置用户管理组件中的相关邮件。详情请参考教程：《用户管理中相关邮件的配置》	
+			</div>
+			<div>
+				3、新用户注册后的审核方式有三种：自动核准、邮件激活、需要管理员批准（即人工审核），详情可参考教程《如何设置用户注册后的审核方式》
+			</div>
+		</div>
+		<script>
+			function postRegister(){
+				var $gender="";
+				if(sex.checked){
+					$gender="1";
+				}else{
+					$gender="0";
+				}
+				var xhr=new XMLHttpRequest();
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var result=xhr.responseText;
+						if(result==1){
+							alert("注册成功");
+						}else{
+							alert("注册失败");
+						}
+					}				
+				}
+				xhr.open("post","/user/v5/register",true);
+				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+				var formdata="uname="+uname.value+"&upwd="+upwd.value+"&email="+email.value+"&phone="+phone.value+"&avatar="+file.value+"&user_name="+user_name.value+"&gender="+$gender;
+
+				xhr.send(formdata);
+			}
+		</script>
+	</body>
+</html>
