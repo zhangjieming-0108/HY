@@ -32,17 +32,20 @@
 .yonhu1{
     width:5%;height:26px;
     margin-left:60%;
-   
+    background:url("../images/tb.png");
+    background-position:-14px 1px;
 }
 .yonhu2{
     margin-left:30px;
     width:5%;height:26px;
-    
+    background:url("../images/tb.png");
+    background-position:-63px 1px;
 }
 .yonhu3{
     margin-left:30px;
     width:5%;height:26px;
-    
+    background:url("../images/tb.png");
+    background-position:-110px 1px;
 }
 .header_login{
     box-sizing:border-box;
@@ -393,7 +396,7 @@ ul li a{
 	width:285px;height:259px;
 	box-sizing:border-box;
 	padding:0 47px;
-	margin:50px 8px;
+	margin:50px 45px;
 }
 .about{
 	width:285px;height:45px;
@@ -435,7 +438,7 @@ ul li a{
 .bottombox2 span{
 	width:285px;height:27px;
 	box-sizing:border-box;
-	margin:50px 8px;
+	margin:50px 45px;
 	padding:0 47px;
 	background:transparent;
 }

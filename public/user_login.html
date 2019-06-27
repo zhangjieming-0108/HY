@@ -3,112 +3,33 @@
 	<head>
 		<meta charset="utf8">
 		<title>花语|登录</title>
-		<style>
-		  *{margin:0;padding:0}
-		  #body{
-			    width:100%; height:600px;background:url('BJ.jpg');
-
-		  }
-		  div.login{
-				width:358px;height:295px;
-				margin:12% auto;
-				border:1px solid rgba(232,232,232,1);
-				border-radius:7px;
-				background:#fff;
-				opacity:0.8;
-				padding:20px;
-
-       }
-       #mg,#mg1{
-			   width:273px;height:43px;
-			   float: left;
-			   border:1px solid #ddd;
-			   border-radius:3px;
-			   background:rgba(236,237,237,0.5);
-			   box-shadow:inset 0 -1px 4px #eee;
-			   color:#333;
-			   outline:none;
-			   box-sizing:border-box;
-			   padding:0 45px;
-				 margin:0 12%;
-			 }
-			 #mg{
-				background:url("../images/yonhu.png");
-        background-repeat:no-repeat;
-				background-position:6px 4px;
-
-			 }
-			 #mg1{
-				background:url("../images/mima.png");
-				background-repeat:no-repeat;
-				background-position:5px 4px;
-			 }
-			  #mig,#mig1{
-				 color:red;
-				 font-size:10px;
-				 padding-left:50%;
-			 }
-			  button{
-				 width:273px;height:43px;
-				 border:1px solid #ff6700;
-				 border-radius:3px;
-         font-family:Roboto;
-				 float:left;
-				 margin:0 5px;
-				 background:#ff6700;
-				 color:#fff;
-				 box-sizing:border-box;
-				 margin-top:20px;
-				 margin-left:12%;
-			  }
-			  .jinru{
-					width:273px;height:32px;
-				  box-sizing:border-box;
-					float:left;
-					margin-left:11%;
-				}
-        .jinru a{	
-		      color:#333;
-					text-decoration:none;
-					text-align:right;
-					font:13px Roboto;
-					
-				}
-				 .jinru label{
-			   font:13px Roboto;
-				 color:#333;
-				 }
-         .jinru label+span{
-					margin-left:28%;
-				 }
-				 .dsf{
-					clear:both;
-					font:13px Roboto;
-					color:#333;
-					margin-left:15%;
-				 }
-				.dsf1{
-					width:273px;height:43px;
-					display:flex;
-					justify-content:space-around;
-					padding:20px 40px;
-				} 
-				.dsf1 a{
-				  width:43px;height:43px;
-					background:url("dsf.png");
-					display:inline-block;
-					
-				}
-				a:first-child{background-position:-15px 3px;}
-				a:nth-child(2){background-position:-208px 3px;}
-        a:nth-child(3){background-position:-80px 3px;}
-        a:last-child{background-position:-144px 3px;}
-		</style>
+		<link rel="stylesheet" href="../css/login.css"/>
 	</head>
 	<body>
-		 <iframe width="100%"height="220px" src="iframe.html"frameborder="0"scrolling="no">
-		 </iframe>
-		 <div id="body">
+		<div class="title">
+			<div class="wellcome">
+				<span> 在线时间 08:30~21:30</span>
+				<span>欢迎访问花语在线商城！</span>
+			</div>
+			<div class="yonhu">
+				<a  class="yonhu1"href="#"><img src="../images/chaolianjie1.png" alt="图片已损坏"></a>
+				<a class="yonhu2"href="user_login.html"><img src="../images/chaolianjie2.png" alt="图片已损坏"></a>
+				<a class="yonhu3"href="#"><img src="../images/chaolianjie3.png" alt=""></a>
+			</div>
+		</div>
+		<div class="header_login">
+			<img src="../images/logo.png" alt="图片已损环">
+		</div>
+		<div class="daohang">
+			<ul>
+				<li><a href="index.html">商城首页</a></li>
+				<li><a href="#">所有商品</a></li>
+				<li><a href="#">支付方式</a></li>
+				<li><a href="#">关于花语</a></li>
+				<li><a href="#">线下门店</a></li>
+			</ul>
+		</div>
+		 <div id="header_login" style="background:url('BJ.jpg') !important;">
 			 <table></table>
 		 <div class="login">
 				<input id="mg" onblur="uname()"onfocus="mig_name()"placeholder="请输入手机号/用户名/邮箱" type="text">
@@ -137,7 +58,113 @@
 				<a href="#"></a>
 			 </div>
 		 </div>
-		 </div>
+		</div>
+		<div class="index_yun_li_fu_you">
+			<div class="index_yun_li_fu_you_box">
+				<img src="../images/huayuyunshu.png" alt="图片已损环"/>
+				<div>
+					<h4>满1000元全国包邮</h4>
+					<p>全场订单满1000元全国包邮</p>
+			   </div>
+			</div>
+			<div class="index_yun_li_fu_you_box">
+				<img src="../images/huayulipin.png" alt="图片已损环"/>
+				<div>
+					<h4>下单送精美礼品</h4>
+					<p>本店购买任意商品赠送精美礼品</p>
+				</div>
+			</div>
+			<div class="index_yun_li_fu_you_box">
+				<img src="../images/huayufuqu.png" alt="图片已损环"/>
+				<div>
+					<h4>贴心的售后服务</h4>
+					<p>7x24小时售后随时为您服务</p>
+				</div>
+			</div>
+			<div class="index_yun_li_fu_you_box">
+				<img src="../images/huayuyouhuijuan.png" alt="图片已损环"/>
+				<div>
+					<h4>店铺优惠劵</h4>
+					<p>每日整点可领取限量优惠劵</p>
+				</div>
+			</div>
+		</div>
+		<div class="bottombox1">
+					<span>
+						<div class="about">About Change</div>
+						<div class="text">
+							本店商品均为易碎品，非质量问题谢绝退换，如有质量问题，本店承担运费调换
+						</div>
+						<div class="pay">Online Payment</div>
+						<div class="tupain"><img src="../images/payment.png" alt="图片破损"></div>
+					</span>
+					<span>
+						<div class="about">Service</div>
+						<div class="text">
+							消費者保障服务
+							七天无理由退款
+							假一赔三
+						</div>
+						<div class="pay">Online Payment</div>
+						<div class="text">
+							非质量问题谢绝退换，如有质量问题，本店承担运费调换
+						</div>
+					</span>
+					<span>
+						<div class="about">About Color</div>
+						<div class="text">
+							本店商品均为易碎品，非质量问题谢绝退换，如有质量问题，本店承担运费调换
+						</div>
+						<div class="pay">Wechat</div>
+						<div class="text">
+							非质量问题谢绝退换，如有质量问题，本店承担运费调换
+						</div>
+					</span>
+					<span>
+						<div class="bottom_login">
+							<img src="../images/logo.png" alt="图片破损">
+						</div>
+						<div class="pay">Social App</div>
+						<div class="tupian">
+							<img src="../images/social app.png" alt="图片破损">
+						</div>
+					</span>
+				</div>
+				<hr>
+				<div class="bottombox2">
+					<span>
+						<div class="about1">关于产品</div>
+						<div class="text1">about color</div>
+						<div class="text">
+							所有商品均为实物拍摄，各浏览器显示有所不同，对此要求高的买家慎拍
+						</div>
+					</span>
+					<span>
+						<div class="about1">关于退货</div>
+						<div class="text1">about change</div>
+						<div class="text">
+							本店商品均为易碎品，非质量问题谢绝退换，如有质量问题，本店承担运费调换
+						</div>
+					</span>
+					<span>
+						<div class="about1">关于产品</div>
+						<div class="text1">about change</div>
+						<div class="text">
+							本店商品均为易碎品，非质量问题谢绝退换，如有质量问题，本店承担运费调换
+						</div>
+					</span>
+					<span>
+						<div class="about1">扫码关注</div>
+						<div class="text1">about change</div>
+						<div class="only">
+							<img src="../images/only.png" alt="图片损坏">
+						</div>
+					</span>
+				</div>
+				<hr>
+				<div class="Copyright">
+					Copyright © 2010-2015花语文化传播有限公司 All rights reserved
+				</div>
 	    <script>
 		   function show(){
 		  	var xhr=new XMLHttpRequest();
@@ -171,7 +198,6 @@
 				if(!mg1.value)
          mig1.innerHTML="密码不能为空";
 			 }
-		   </script>
-			 <iframe width="100%"height="684px" src="buttomiframe.html"frameborder="0"scrolling="no">
+		   </script>	 
 	</body>
 </html>
