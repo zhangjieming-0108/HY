@@ -4,62 +4,62 @@
 		<title></title>
 		<meta charset="utf8">
 		<title>花语|注册</title>
-		<style>
-			/*body{background-image:url("BJ.jpg")}*/
-		</style>
+		<link rel="stylesheet" href="../css/register.css"/>
 	</head>
 	<body>
-	  <div>
-			<div>
-			 登录名称<input id="uname"type="text">
-			</div>
-			<div>
-				密码<input id="upwd" type="password">
-			</div>
-			<div>
-				邮箱<input id="email"type="email">
-			</div>
-			<div>
-				电话<input id="phone"type="text">
-			</div>
-			<div>
-				<input id="file"type="file">
-			</div>
-			<div>
-			  真实姓名<input id="user_name"type="text">
-			</div>
-			<div>
-			  性别<input id="sex"type="radio"name="gender"value="1"checked><label for="sex">男</label>
-				<input id="sex1"type="radio"name="gender"value="0">
-				<label for="sex1">女</label>
-			</div>
-			<div>
-				<input id="box"type="checkbox" >
-				<label for="box">我同意《用户手册》和《保密条款》</label>
-			</div>
-      <div>
-				<button onclick="postRegister()">注册</button>
-			</div>
-			<div>
-				<a href="user_login.html">
-					<button>已经有账号？请登录</button>
-				</a>
-			</div>
-			<div>
-				第三方账号登录: <img src="../images/TB.png" alt="图片已损坏">
-			</div>
-			<div>
-				用户注册/登录说明：
-			</div>
-			<div>
-				1、演示用户名：demouser；密码： demo1234
-			</div>
-			<div>
-				2、实际使用之前，需配置用户管理组件中的相关邮件。详情请参考教程：《用户管理中相关邮件的配置》	
-			</div>
-			<div>
-				3、新用户注册后的审核方式有三种：自动核准、邮件激活、需要管理员批准（即人工审核），详情可参考教程《如何设置用户注册后的审核方式》
-			</div>
+	  	<div class="register_box">
+			  <ul>
+				<li>
+					 <span>登录名称</span>
+					 <input id="$uname"type="text" onblur="uname()" onfocus="mig_name()">
+					 <span id="mig"></span>
+				</li>
+				<li>
+					<span>密码</span>
+					<input id="$upwd" type="password" onblur="upwd()" onfocus="mig_upwd()">
+					<span id="mig1"></span>
+				</li>
+				<li>
+					<span>邮箱</span>
+					<input id="email"type="email">
+				</li>
+				<li>
+					<span>电话</span>
+					<input id="phone"type="text">
+				</li>
+				<li>
+					<input id="file"type="file">
+				</li>
+				<li>
+					  <span>真实姓名</span>
+					  <input id="user_name"type="text">
+				</li>
+		    	<li>
+					  <span>性别</span>
+					  <input id="sex"type="radio"name="gender"value="1"checked><label for="sex">男</label>
+					<input id="sex1"type="radio"name="gender"value="0">
+					<label for="sex1">女</label>
+				</li>
+      			<li>
+					<button onclick="postRegister()">注册</button>
+				</li>
+				<li class="consent">
+					<input 	id="box"type="checkbox" >
+					<label for="box">我同意《用户手册》和《保密条款》</label>
+					<a href="user_login.html">
+						已经有账号？请登录
+					</a>
+				</li>
+				<li>
+					<span class=" text_Other_platforms">其他方式登录</span> 
+					<span class="Other_platforms">
+						<a href="#"></a>
+						<a href="#"></a>
+						<a href="#"></a>
+						<a href="#"></a>	
+					</span>
+				</li>
+			</ul>
 		</div>
 		<script>
 			function postRegister(){
@@ -83,9 +83,37 @@
 				xhr.open("post","/user/v5/register",true);
 				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
 				var formdata="uname="+uname.value+"&upwd="+upwd.value+"&email="+email.value+"&phone="+phone.value+"&avatar="+file.value+"&user_name="+user_name.value+"&gender="+$gender;
-
 				xhr.send(formdata);
 			}
+			//输入框的提示 
+			function mig_name(){
+				mig.innerHTML=`<h6 style="color:red font-size:6px">用户名要8~12位</h6>`;
+		   }
+			 function mig_upwd(){
+				mig1.innerHTML=`<h6 style="color:red font-size:6px">密码要8~12位</h6>`;
+			 }
+			//  验证用户输入框的内容
+			 function uname(){
+				 var reg=/^.{8,12}$/;
+				if(!$uname.value){
+				mig.innerHTML="用户名不能为空";
+			 	}else if(reg.test($uname.value)!=true){
+				mig.innerHTML="输入格式不正确";
+			 	}else{
+					mig.innerHTML=`<h6 style="color:green">通过</h6>`
+					}
+			 }
+			 //  验证验证密码输入框的内容
+			 function upwd(){
+				var reg=/^.{6,8}$/;
+				if(!$upwd.value){
+					mig1.innerHTML="密码不能为空";
+				}else if(reg.test($upwd.value)!=true){
+					mig1.innerHTML="输入格式不正确";
+				}else{
+					mig1.innerHTML=`<h6 style="color:green">通过</h6>`
+				}
+			 }
 		</script>
 	</body>
 </html>

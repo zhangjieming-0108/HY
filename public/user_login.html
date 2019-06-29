@@ -39,7 +39,7 @@
 			  <input  id="mg1"onblur="upwd()"onfocus="mig_upwd()" placeholder="请输入密码"type="password" name="upwd">
 		   <span id="mig1"></span>
 		   <button onclick="show()">
-					登录
+				登录
 			 </button>
        <div class="jinru">
 					<input id="jz"type="checkbox">
@@ -54,7 +54,7 @@
 				——————其他方式登录——————
 			 </div>
 			 <div class="dsf1">
-				<a class="dsf3" href="#"></a>
+				<a href="#"></a>
 				<a href="#"></a>
 				<a href="#"></a>
 				<a href="#"></a>
@@ -187,18 +187,30 @@
 			  xhr.send();
 		   }
 		   function mig_name(){
-				mig.innerHTML="用户名要6~12位";
+				mig.innerHTML="用户名要8~12位";
 		   }
 			 function mig_upwd(){
-				mig1.innerHTML="密码要6~12位";
+				mig1.innerHTML="密码要6~8位";
 			 }
 			 function uname(){
-				if(!mg.value)
+				 var reg=/^.{8,12}$/;
+				if(!mg.value){
 				mig.innerHTML="用户名不能为空";
+			 	}else if(reg.test(mg.value)!=true){
+				mig.innerHTML="输入格式不正确";
+			 	}else{
+					mig.innerHTML=`<h6 style="color:green">通过</h6>`
+					}
 			 }
 			 function upwd(){
-				if(!mg1.value)
-         mig1.innerHTML="密码不能为空";
+				var reg=/^.{6,8}$/;
+				if(!mg1.value){
+					mig1.innerHTML="密码不能为空";
+				}else if(reg.test(mg1.value)!=true){
+					mig1.innerHTML="输入格式不正确";
+				}else{
+					mig1.innerHTML=`<h6 style="color:green">通过</h6>`
+				}
 			 }
 		   </script>	 
 	</body>

@@ -1,11 +1,70 @@
-*{margin:0;padding: 0}
+*{margin:0;padding:0}
 /* 头部图片 */
 .header_tupain{
     box-sizing: border-box;
     width: 100%;height:291px;
-    margin: 2px 6px;
+    margin: 30px 0;
 }
- img{
+.header_tupain img{
     box-sizing: border-box;
     width: 80%;height:291px;
+    margin:0 auto;
+    display: block;
+
+}
+/* 内容介绍 */
+h3{
+    width: 105px;height: 19px;
+    font:16px raleway;
+    margin:25px auto;
+    color: #666666;
+}
+p{
+    width: 60%;height: 67px;
+    font:13px raleway;
+    margin:0 auto;
+    color: #808080;
+    text-align:center; 
+}
+p span{
+    width:100%;height: 19px;
+}
+/* 所有商品 */
+.product_all{
+    width: 100%;
+    padding:30px 0;
+}
+.product_all ul{
+    width: 80%;height: 327px;
+    display: flex;
+    justify-content:space-around;
+    box-sizing: border-box;
+    list-style: none;
+    margin:0 auto;
+}
+/*每个的商品 */
+.product_all ul li{
+    width: 20%;height: 327px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction:column;
+}
+.product_all ul li a img{
+    width:100%;height: 250px;
+    box-sizing: border-box;
+}
+.product_all ul li h3{
+    width:100%;
+    text-align: center;
+    font: 14px 微软雅黑;
+    color:#494949;
+    margin: 0;
+    box-sizing: border-box;
+}
+.product_all ul li span{
+    width:100%;
+    text-align: center;
+    font: 16px raleway;
+    color: #AAAAAA;
+    box-sizing: border-box;
 }

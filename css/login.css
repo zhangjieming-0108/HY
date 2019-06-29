@@ -99,7 +99,7 @@ div.login{
 }
 #mg,#mg1{
    width:273px;height:43px;
-   float: left;
+   display: inline-block;
    border:1px solid #ddd;
    border-radius:3px;
    background:rgba(236,237,237,0.5);
@@ -108,7 +108,7 @@ div.login{
    outline:none;
    box-sizing:border-box;
    padding:0 45px;
-     margin:0 12%;
+     margin:3px 12%;
  }
  #mg{
     background:url("../images/yonhu.png");
@@ -124,7 +124,7 @@ background-repeat:no-repeat;
   #mig,#mig1{
      color:red;
      font-size:10px;
-     padding-left:50%;
+     float:right;
  }
   button{
      width:273px;height:43px;
@@ -136,7 +136,7 @@ font-family:Roboto;
      background:#ff6700;
      color:#fff;
      box-sizing:border-box;
-     margin-top:20px;
+     margin-top:15px;
      margin-left:12%;
   }
   .jinru{

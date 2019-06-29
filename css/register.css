@@ -1,0 +1,116 @@
+*{margin:0;padding:0}
+/* 注册页面 */
+.register_box{
+    width: 100%;height:700px;
+    box-sizing: border-box;
+    background:url("../images/BJ.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 注册框 */
+.register_box ul{
+    width:470px;height:490px;
+    box-sizing:border-box;
+    list-style:none;
+    background: #fff;
+    border-radius:4px;
+    padding: 10px 33px;
+    opacity:0.8;
+
+}
+.register_box ul li{
+    width:100%;height: 32px;
+    box-sizing: border-box;
+    margin:12px 0;
+}
+/* 注册框的文字 */
+.register_box ul li span{
+    width:30%;height: 32px;
+    line-height: 32px;
+    box-sizing: border-box;
+    font: 13px Roboto;
+    color: #333;
+    display: inline-block;
+}
+/* 注册框的input */
+.register_box ul li input{
+    box-sizing: border-box;
+    width:60%;height:32px;
+    outline: none;
+    border: 1px solid #ddd;
+    background:rgba(236,237,237,0.5);
+    border-radius: 3px;
+    padding: 3px 25px;
+    box-shadow:inset 0 -1px 4px #eee;
+}
+/* 头像图片文件框 */
+.register_box ul li #file{
+    text-align: left;
+    padding:0;
+    width:45%;
+    height:25px;
+}
+/* 性别选择 */
+.register_box ul li #sex,.register_box ul li #sex1{
+    width:auto;height:auto;
+}
+/* 注册按钮 */
+.register_box ul li button{
+     width:100%;height:43px;
+     border:1px solid #ff6700;
+     border-radius:3px;
+     font-family:Roboto;
+     display: inline-block;
+     background:#ff6700;
+     color:#fff;
+     box-sizing:border-box;     
+}
+/* 我同意《用户手册》 */
+.register_box ul .consent{
+    width:auto;height:auto;
+    box-sizing: border-box;
+    margin: 0;
+    line-height:21px;
+}
+.register_box ul li #box{
+    width:auto;height:auto;
+}
+.register_box ul li label{
+    font: 9px Roboto;
+    color: #333; 
+
+}
+/* 已有账号请登录 */
+.register_box ul li a{
+    text-decoration: none;
+    float:right;
+    font: 9px Roboto;
+    color: #333;
+    line-height:21px;
+}
+/* 其他方式登录 */
+.register_box ul li .text_Other_platforms{
+    width: 20%;
+    line-height:32px;
+    float: left;
+}
+.register_box ul li .Other_platforms{
+    width:273px;height:32px;
+    display:flex;
+    float: left;
+} 
+/* 其他方式登录的图标，用精灵图的方式显示 */
+.register_box ul li .Other_platforms a{
+  width:32px;height:32px;
+  background:url("../images/dsf.png");
+  display:inline-block;
+  margin:0 10px;   
+}
+/*移动显示出来的位置 */
+.register_box ul li .Other_platforms a:first-child{background-position:-22px -3px;}
+.register_box ul li .Other_platforms a:nth-child(2){background-position:-214px -3px}
+.register_box ul li .Other_platforms a:nth-child(3){background-position:-85px -3px;}
+.register_box ul li .Other_platforms a:last-child{background-position:-150px -3px;}
+
+
