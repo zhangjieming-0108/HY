@@ -1,0 +1,39 @@
+*{margin: 0;padding: 0}
+/* 在线支付、银行转账、货到付款整个的样式 */
+.pay_header,.pay_middle,.pay_footer{
+    box-sizing: border-box;
+    width: 100%;
+    padding:50px 30px;
+    display: flex;
+    flex-direction: column;
+}
+/* 大标题样式 */
+.pay_header h3,.pay_middle h3,.pay_footer h3{
+    font:26px 宋体;
+    color: black;
+    font-weight: bold;
+}
+/* 英文标题样式 */
+.pay_header span,.pay_middle span,.pay_footer span{
+    color:#A9A9A9;
+    font:14px  times new roman;
+    margin-bottom: 60px;
+}
+/* 小标题样式 */
+.pay_header h5,.pay_middle h5,.pay_footer h5{
+    font:13px 宋体;
+    color: #696969;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+/* 段落及文字的样式 */
+.pay_header p:nth-child(4),.pay_header p:nth-child(6),.pay_header p:nth-child(8),.pay_middle p:nth-child(4),
+.pay_middle p:nth-child(5),.pay_middle p:nth-child(7),.pay_footer p:nth-child(4),.pay_footer p:nth-child(5){
+    font:13px 宋体;
+    color:#696969;
+}
+.pay_header p:nth-child(5),.pay_header p:nth-child(7),.pay_header p:nth-child(9),.pay_middle p:nth-child(6),.pay_middle p:nth-child(8),.pay_footer p:nth-child(6){
+    font:13px 宋体;
+    color:#696969;
+    margin-bottom: 30px;
+}
