@@ -13,7 +13,7 @@
     width:470px;height:490px;
     box-sizing:border-box;
     list-style:none;
-    background: #fff;
+    background:#fff;
     border-radius:4px;
     padding: 10px 33px;
     opacity:0.8;
@@ -23,6 +23,7 @@
     width:100%;height: 32px;
     box-sizing: border-box;
     margin:12px 0;
+    position: relative;
 }
 /* 注册框的文字 */
 .register_box ul li span{
@@ -32,6 +33,15 @@
     font: 13px Roboto;
     color: #333;
     display: inline-block;
+}
+/* 验证密码、用户、邮箱输入框显示的样式 */
+.register_box ul li #mig,.register_box ul li #mig1,.register_box ul li #mig3{
+    position: absolute;
+    right:1px;
+    color: red;
+    font-size:8px;
+    line-height: 32px;
+    text-align: right;
 }
 /* 注册框的input */
 .register_box ul li input{

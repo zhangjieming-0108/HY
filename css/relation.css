@@ -1,0 +1,62 @@
+*{margin:0;padding:0}
+/* 头部图片 */
+.header_tupain{
+    box-sizing: border-box;
+    width: 100%;height:257px;
+}
+.header_tupain img{
+    box-sizing: border-box;
+    width:100%;height:257px;
+    display:block;
+}
+/* 内容 */
+.content{
+    widows: 100%;
+    display:flex;
+    box-sizing:border-box;
+    margin-top:60px;
+
+}
+/* 内容左边的总体 */
+.content .content_left{
+    width:70%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding:0 30px;
+}
+/* 内容右边的总体 */
+.content .content_right{
+    width:30%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding:0 20px;
+}
+/* 内容左边的总体标题 */
+.content .content_left h3{
+    font:22px 微软雅黑;
+    color:#000;
+}
+.content .content_left span{
+    font:14px arial;
+    color: #A9A9A9;
+    margin-bottom: 35px;
+}
+/*内容左边的总体内容  */
+.content .content_left p{
+    width: 100%;
+    box-sizing: border-box;
+    margin:35px 0;
+    color:#808080;
+    font:12px 微软雅黑;
+}
+/*内容右边的总体图片  */
+.content .content_right img{
+    width:100%;height:180px;
+    box-sizing: border-box;
+    margin: 5px 0;
+}
+
+
+

@@ -186,6 +186,7 @@
 			  xhr.open("get","/user/v5/login/"+mg.value+"-"+mg1.value,true);
 			  xhr.send();
 		   }
+		   
 		   function mig_name(){
 				mig.innerHTML="用户名要8~12位";
 		   }
@@ -193,24 +194,12 @@
 				mig1.innerHTML="密码要6~8位";
 			 }
 			 function uname(){
-				 var reg=/^.{8,12}$/;
-				if(!mg.value){
+				if(!mg.value)
 				mig.innerHTML="用户名不能为空";
-			 	}else if(reg.test(mg.value)!=true){
-				mig.innerHTML="输入格式不正确";
-			 	}else{
-					mig.innerHTML=`<h6 style="color:green">通过</h6>`
-					}
 			 }
 			 function upwd(){
-				var reg=/^.{6,8}$/;
-				if(!mg1.value){
+				if(!mg1.value)
 					mig1.innerHTML="密码不能为空";
-				}else if(reg.test(mg1.value)!=true){
-					mig1.innerHTML="输入格式不正确";
-				}else{
-					mig1.innerHTML=`<h6 style="color:green">通过</h6>`
-				}
 			 }
 		   </script>	 
 	</body>

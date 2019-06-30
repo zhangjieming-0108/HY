@@ -3,6 +3,8 @@
 	<head>
 		<title></title>
 		<meta charset="utf8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>花语|注册</title>
 		<link rel="stylesheet" href="../css/register.css"/>
 	</head>
@@ -21,7 +23,8 @@
 				</li>
 				<li>
 					<span>邮箱</span>
-					<input id="email"type="email">
+					<input id="$email"type="text" onblur="email()" onfocus="mig_email()">
+					<span id="mig3"></span>
 				</li>
 				<li>
 					<span>电话</span>
@@ -82,15 +85,20 @@
 				}
 				xhr.open("post","/user/v5/register",true);
 				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-				var formdata="uname="+uname.value+"&upwd="+upwd.value+"&email="+email.value+"&phone="+phone.value+"&avatar="+file.value+"&user_name="+user_name.value+"&gender="+$gender;
+				var formdata="uname="+$uname.value+"&upwd="+$upwd.value+"&email="+$email.value+"&phone="+phone.value+"&avatar="+file.value+"&user_name="+user_name.value+"&gender="+$gender;
 				xhr.send(formdata);
 			}
 			//输入框的提示 
 			function mig_name(){
-				mig.innerHTML=`<h6 style="color:red font-size:6px">用户名要8~12位</h6>`;
+				mig.innerHTML="用户名要8~12位";
 		   }
 			 function mig_upwd(){
-				mig1.innerHTML=`<h6 style="color:red font-size:6px">密码要8~12位</h6>`;
+				
+				mig1.innerHTML="密码要6~8位";
+				console.log(123);
+			 }
+			 function mig_email(){
+				mig3.innerHTML="请输入邮箱";
 			 }
 			//  验证用户输入框的内容
 			 function uname(){
@@ -100,7 +108,7 @@
 			 	}else if(reg.test($uname.value)!=true){
 				mig.innerHTML="输入格式不正确";
 			 	}else{
-					mig.innerHTML=`<h6 style="color:green">通过</h6>`
+					mig.innerHTML=`<h6 style="color:green">√</h6>`
 					}
 			 }
 			 //  验证验证密码输入框的内容
@@ -111,7 +119,18 @@
 				}else if(reg.test($upwd.value)!=true){
 					mig1.innerHTML="输入格式不正确";
 				}else{
-					mig1.innerHTML=`<h6 style="color:green">通过</h6>`
+					mig1.innerHTML=`<h6 style="color:green">√</h6>`
+				}
+			 }
+			// 验证邮箱输入框的内容
+			 function email(){
+				var reg=/^[a-zA-Z0-9]+@[a-zA-Z0-9]+(.com|.cn)$/;
+				if(!$email.value){
+					mig3.innerHTML="邮箱不能为空";
+				}else if(reg.test($email.value)!=true){
+					mig3.innerHTML="输入格式不正确";sss
+				}else{
+					mig3.innerHTML=`<h6 style="color:green">√</h6>`
 				}
 			 }
 		</script>
