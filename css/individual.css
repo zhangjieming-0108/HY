@@ -1,0 +1,272 @@
+*{margin:0;padding:0;}
+/* 面包线导航 */
+.individual_nav{
+    width: 100%;height: 49px;
+    list-style: none;
+    box-sizing: border-box;
+    display:flex;
+    padding: 0 5%;
+    background: url("../images/titlebj.png");
+    align-items: center;
+    border-top: 1px solid #595959;
+    border-bottom: 1px solid #595959;
+}
+.individual_nav li a{
+    margin:0 8px;
+    text-decoration: none;
+    color: #595959;
+    font:14px 微软雅黑;
+}
+/* 内容的总体 */
+.individual_sec{
+    width: 100%;
+    box-sizing:border-box;
+    display: flex;
+    background: url("../images/titlebj.png");
+    padding:35px 5%;
+    
+}
+/* 主体左边总体 */
+.individual_sec .individual_sec_l{
+    width: 70%;
+    box-sizing: border-box;
+    padding: 40px 25px;
+    background: #fff;
+
+}
+/* 主体右边总体 */
+.individual_sec .individual_sec_r{
+    width: 30%;
+    box-sizing: border-box;
+    padding: 1px 1px;
+    background: #fff;
+}
+/* 主体左边植物花卉图片*/
+.individual_sec .individual_sec_l .con{
+    width: 40%;height: 369px;
+    box-sizing: border-box;
+    float: left;
+}
+.individual_sec .individual_sec_l .con img{
+    width: 100%;height: 296px;
+}
+.individual_sec .individual_sec_l .con img+img{
+    width: 20%;height: 65px;
+    box-sizing: border-box;
+    border-bottom:2px solid #DDDDDD;
+}
+/* 主体左边植物花卉信息*/
+.individual_sec .individual_sec_l .sum{
+    width: 60%;height: 369px;
+    box-sizing: border-box;
+    float: left;
+    border-radius: 3px;
+}
+.individual_sec .individual_sec_l .sum h3{
+  font:20PX 微软雅黑; 
+  box-sizing: border-box;
+  margin:10px 0;
+  background:rgb(187, 233, 163);
+  color: rgb(0, 153, 0);
+  border-radius: 3px;
+  padding: 1px 30px;  
+}
+.individual_sec .individual_sec_l .sum h2{
+    font:32px tahoma;
+    margin:7px 0;
+    box-sizing: border-box;
+    padding: 1px 30px;  
+}
+.individual_sec .individual_sec_l .sum p{
+    width: 100%;height: 31px;
+    border-top: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    line-height:31px !important;
+    font:12px 微软雅黑;
+    color: #777777;
+    box-sizing: border-box;
+    padding: 1px 30px;  
+}
+.individual_sec .individual_sec_l .sum p+p{
+    border:0;
+    box-sizing: border-box; 
+    margin-bottom: 5px;
+    display: flex;
+    padding: 1px 30px; 
+}
+.individual_sec .individual_sec_l .sum p+p a{
+    text-decoration: none;
+    color: red;
+    padding: 1px 30px; 
+} 
+/* 购物车按钮 */
+.individual_sec .individual_sec_l .sum .shop{
+    width:100%;height: 46px;
+    box-sizing: border-box;
+    display: flex;
+    padding: 1px 30px; 
+}
+.individual_sec .individual_sec_l .sum .shop button{
+    width: 30%;height: 46px;
+    border-radius: 3px;
+    background:red;
+    color: #fff;
+    border: 0;
+    box-sizing: border-box;
+}
+.individual_sec .individual_sec_l .sum .shop .add{
+    width: 31%;height: 46px;
+    box-sizing: border-box;
+    margin-left: 10px;
+    border:1px solid #DDDDDD;
+    border-radius: 3px;
+    display:flex;
+    justify-content: space-between;
+}
+.individual_sec .individual_sec_l .sum .shop .add button:first-child{
+    width:31.5%;height: 46px;
+    box-sizing: border-box; 
+    border-right: 1px solid #DDDDDD;
+
+}
+.individual_sec .individual_sec_l .sum .shop .add input{
+    width:28%;height: 40px;
+    border:0;
+    box-sizing: border-box;
+    outline: none;
+    padding: 10px;
+}
+.individual_sec .individual_sec_l .sum .shop .add button:last-child{
+    width:31.5%;height: 46px;
+    box-sizing: border-box;
+    border: 0;
+    border-left: 1px solid #DDDDDD;
+}
+/* 用户评论 */
+.individual_sec .individual_sec_l p{
+    width:100%;height:43px;
+    box-sizing: border-box;
+    border-bottom:3px  solid #eee;
+    border-top:1px  solid #eee;
+    line-height:43px !important;
+    font:14px 微软雅黑;
+    clear: both;
+}
+.individual_sec .individual_sec_l div:nth-child(4){
+    width:100%;height:50px;
+    border-top:0;
+    border-bottom:1px  solid #eee;
+    display: flex;
+    flex-direction: column;
+    font: 13px 微软雅黑;
+    padding:8px 0;
+    box-sizing: border-box;
+}
+/* 相关商品 */
+.individual_sec .individual_sec_l h3{
+    width:100%;height:30PX;
+    box-sizing: border-box;
+    padding: 6px 0;
+    font:14px 微软雅黑;
+    color: #555555; 
+    font-weight: bold;
+}
+.individual_sec .individual_sec_l ul{
+    width: 100%;height: 244px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    box-sizing: border-box;
+}
+.individual_sec .individual_sec_l ul li{
+    width: 20%;height: 244px;
+    box-sizing: border-box;
+    text-align: center;
+}
+/* 相关商品图片和文字*/
+.individual_sec .individual_sec_l ul li a img{
+    width:100%;height:169 px;
+}
+.individual_sec .individual_sec_l ul li a {
+    text-decoration:none !important ;
+    font:13px 微软雅黑;
+    color: #494949;
+}
+.individual_sec .individual_sec_l ul li span{
+    font:16px 黑体;
+    color: #AAAAAA; 
+}
+/* 主体右边的元素信息 */
+.individual_sec .individual_sec_r ul{
+    width:100%;
+    box-sizing: border-box;
+    list-style: none;
+}
+.individual_sec .individual_sec_r ul li{
+    width:100%;height: 44px;
+    box-sizing: border-box;
+    line-height: 44px !important;
+    font:13px "ËÎÌå",Arial 微软雅黑;
+    color:#535353 ;
+    padding: 0 18px;
+    background:rgb(187, 233, 163);
+
+}
+.individual_sec .individual_sec_r ul li:first-child{
+    background:rgb(83, 190, 56);
+    color: #fff;
+    font:17px "ËÎÌå",Arial 微软雅黑;
+    font-weight: bold;
+}
+.individual_sec .individual_sec_r ul li:nth-child(2){
+    font-weight: bold;
+}
+/* 热卖商品 */
+.individual_sec .individual_sec_r h3{
+    width:100%;height:44px;
+    box-sizing: border-box;
+    background:rgb(83, 190, 56);
+    line-height: 44px;
+    padding: 0 18px;
+    color: #fff;
+    font:"ËÎÌå",Arial 微软雅黑;
+}
+.individual_sec .individual_sec_r .hot_sale{
+    width:100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+}
+/* 每一个热卖商品 */
+.individual_sec .individual_sec_r .hot_sale ul{
+    width:50%;height: 150px;
+    box-sizing:border-box;
+    list-style: none;
+    background: #ffffff;;
+}
+/* 热卖商品文字 */
+.individual_sec .individual_sec_r .hot_sale ul li{
+    width:100%;height: 30px;
+    line-height: 30px !important;
+    text-align: center;
+    box-sizing:border-box;
+    font:12px "ËÎÌå",Arial 微软雅黑;
+    background:#fff;
+}
+/* 热卖商品图片 */
+.individual_sec .individual_sec_r .hot_sale ul li:first-child{
+    width: 100%;height: 85px;
+    box-sizing:border-box;
+    padding:0 20px;
+}
+.individual_sec .individual_sec_r .hot_sale ul li img{
+    width: 100%;height: 85px;
+    box-sizing:border-box;
+
+}
+.individual_sec .individual_sec_r .hot_sale ul li a{
+    text-decoration: none;
+    color: #595959;
+    font-weight:bold;
+
+}
