@@ -1,0 +1,39 @@
+*{margin: 0;padding: 0;box-sizing: border-box}
+/* 如果您之前已经注册过账号， 请点这里登录 */
+.close{
+    width: 100%;
+    padding: 30px 50px;
+    }
+.close-f{
+    width:100%;height: 51px;
+    border: 1px solid #bbbbbb;
+    display: flex;
+    padding: 14px 14px;
+}
+.close-f::before{
+    content: "* 如果您之前已经注册过账号，";
+    font-size: 16px;
+}
+.close .close-f a{
+    text-decoration: none;
+    color:#494949;
+    font-size: 16px;
+}
+/* 账单地址和订单详情 */
+.close .close-s{
+    display: flex;
+    padding: 27px 0;
+}
+/* 账单地址 */
+.close .close-s .site{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+}
+/* 标题 */
+.close .close-s h3{
+    width: 100%;height: 31px;
+    font:24px 微软雅黑,Helvetica,Arial,Verdana,sans-serif;
+    color: black;
+    font-weight: bold;
+}
