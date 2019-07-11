@@ -1,4 +1,9 @@
 *{margin:0;padding:0}
+/* 全局 */
+#box{
+	min-width: 1260px;
+	margin: 0 auto;
+}
 /*轮播图*/
 .lunbo {
 	display: inline-block;
@@ -15,13 +20,14 @@
 	box-sizing:border-box;
 	margin:20px 0;
 	padding:0 10%;
+	display: flex;
+	justify-content: center;
 }
 .tuijian img{
 	width:47%;height:330Px;
 	border:1px solid #dddddd;
 	padding:6px;
 	box-sizing:border-box;
-	float:left;
 	margin:0 7px;
 }
 .tuijian img:first-child{

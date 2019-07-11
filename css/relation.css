@@ -1,4 +1,8 @@
 *{margin:0;padding:0}
+#box{
+    max-width: 1115px;
+    margin: 0 auto;
+}
 /* 头部图片 */
 .header_tupain{
     box-sizing: border-box;
@@ -23,7 +27,7 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    padding:0 30px;
+    padding-right:30px;
 }
 /* 内容右边的总体 */
 .content .content_right{
@@ -31,7 +35,7 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    padding:0 20px;
+    padding-left:20px;
 }
 /* 内容左边的总体标题 */
 .content .content_left h3{
