@@ -30,11 +30,12 @@
 	box-sizing:border-box;
 	margin:0 7px;
 }
-.tuijian img:first-child{
-	animation:bouncelnRight 2s;
+/* 滚动条到达指定位置执行的动画  */
+.tuijian .fixed:first-child{
+	animation:bounceInRight 2s;
 }
-.tuijian img:last-child{
-	animation:bouncelnLeft 2s;
+.tuijian .fixed:last-child{
+	animation:bounceInLeft 2s;
 }
 /* 今日上新 */
 .xingheader{
