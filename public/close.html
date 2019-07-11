@@ -17,6 +17,22 @@
             <!-- 账单地址 -->
             <div class="site">
                 <h3>账单地址</h3>
+                <label for="country">国家/地区 *</label>
+                <span>
+                    <select name="provs" id="country">
+                        <option value="">国家/地区 ...</option>
+                        <option value="">中国</option>
+                        <option value="">美国</option>
+                        <option value="">日本</option>
+                        <option value="">俄罗斯</option>
+                        <option value="">丹麦</option>
+                        <option value="">韩国</option>
+                        <option value="">加拿大</option>
+                        <option value="">伊莱克</option>
+                        <option value="">意大利</option>
+                    </select>
+                    <select name="cities" class="hide"></select>
+                </span>
             </div>
             <!-- 订单详情 -->
             <div class="details">
@@ -24,5 +40,83 @@
             </div>
         </div>
     </div>
+    <script>
+       /*实现“省”和“市”的级联下拉列表*/
+	var cities=[
+      [{"name":'东城区',"value":101},
+       {"name":'西城区',"value":102},
+       {"name":'海淀区',"value":103},
+       {"name":'朝阳区',"value":104}],
+      [{"name":'河东区',"value":201},
+       {"name":'河西区',"value":202},
+       {"name":'南开区',"value":303}],
+      [{"name":'石家庄市',"value":301},
+       {"name":'廊坊市',"value":302},
+       {"name":'保定市',"value":303},
+       {"name":'唐山市',"value":304},
+       {"name":'秦皇岛市',"value":304}]
+       [{"name":'东城区',"value":101},
+       {"name":'西城区',"value":102},
+       {"name":'海淀区',"value":103},
+       {"name":'朝阳区',"value":104}],
+      [{"name":'河东区',"value":201},
+       {"name":'河西区',"value":202},
+       {"name":'南开区',"value":303}],
+      [{"name":'石家庄市',"value":301},
+       {"name":'廊坊市',"value":302},
+       {"name":'保定市',"value":303},
+       {"name":'唐山市',"value":304},
+       {"name":'秦皇岛市',"value":304}]
+       [{"name":'东城区',"value":101},
+       {"name":'西城区',"value":102},
+       {"name":'海淀区',"value":103},
+       {"name":'朝阳区',"value":104}],
+      [{"name":'河东区',"value":201},
+       {"name":'河西区',"value":202},
+       {"name":'南开区',"value":303}],
+      [{"name":'石家庄市',"value":301},
+       {"name":'廊坊市',"value":302},
+       {"name":'保定市',"value":303},
+       {"name":'唐山市',"value":304},
+       {"name":'秦皇岛市',"value":304}]
+    ]; 
+    // 找到name为provs的元素
+    var selProvs=document.querySelector(".close .close-s span select");
+    // 找到name为cities的元素
+    var selCts=document.querySelector(".close .close-s span .hide");
+    //当provs中选中的省份发生变化时
+    selProvs.onchange=function(){
+  //获得当前选中省份的下标位置i
+   var i=this.selectedIndex;//当前选中项在所有<option>中的下标
+  //只有点的不是第一项=请选择=时，才继续执行下列操作
+   if(i>0){
+    //去cities数组中获得i-1位置的子数组
+    var cts=cities[i-1];
+    //创建文档片段frag
+    var frag=document.createDocumentFragment();
+    //创建<option>=请选择=，并追加到frag中
+    var opt=document.createElement("option");
+    opt.innerHTML="=请选择=";
+    frag.appendChild(opt);
+    //遍历cts中每个城市对象
+    for(var c of cts){
+      //每遍历一个城市对象，就创建一个<option>元素，设置起内容为城市名
+      var opt=document.createElement("option");
+      opt.innerHTML=c.name;
+      //并将新<option>追加到frag中
+      frag.appendChild(opt);
+    }//(遍历结束)
+    //在添加新内容前，先清空selCts的旧内容
+    selCts.innerHTML="";
+    //将frag整体追加到selCts中
+    selCts.appendChild(frag);
+    //让第二个select显示出来
+    selCts.className="";
+  }else{//否则，如果点的是=请选择=
+    //就隐藏旁边的selCts
+    selCts.className="hide";
+  }
+}
+    </script>
 </body>
 </html>
