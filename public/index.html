@@ -13,7 +13,7 @@
 <body>
     <div id="box">
         <!--轮播图-->
-        <div class="lunbo"><img src="../images/lunbo1.jpg" alt="图片已损环" /></div>
+        <div class="lunbo"><img data-target="tab" src="../images/lunbo1.jpg" alt="图片已损环" /></div>
         <!--推荐品-->
         <div class="tuijian">
             <img data-target="tab" src="../images/tuijian.jpg " alt="图片已损环" />
@@ -28,22 +28,22 @@
             </div>
         </div>
         <div class="xingshanpingBOX">
-            <div class="xingshanping">
+            <div class="xingshanping" data-target="tab">
                 <a href="individual.html"><img src="../images/shanping001.jpg" alt="图片已损坏"></a>
                 <span>植物花卉001</span>
                 <span>￥5900</span>
             </div>
-            <div>
+            <div data-target="tab">
                 <a href="individual.html"><img src="../images/shanping002.jpg" alt="图片已损坏"></a>
                 <span>植物花卉002</span>
                 <span>￥6900</span>
             </div>
-            <div>
+            <div data-target="tab">
                 <a href="individual.html"><img src="../images/shanping003.jpg" alt="图片已损坏"></a>
                 <span>植物花卉003</span>
                 <span>￥5000</span>
             </div>
-            <div>
+            <div data-target="tab">
                 <a href="individual.html"><img src="../images/shanping004.jpg" alt="图片已损坏"></a>
                 <span>植物花卉004</span>
                 <span>￥6500</span>
@@ -195,24 +195,43 @@
         </div>
     </div>
     <script>
+        // 页面滚动条带动的页面动画功能
+    (function(){
         //页面加载时间
         window.onload = function () {
-            //获取元素   
+            //获取元素 
+            // 获取推荐图元素  
             var imgs = document.querySelectorAll("#box .tuijian [data-target=tab]");
+            // 获取轮播图元素
+            var lun=document.querySelectorAll("#box .lunbo [data-target=tab]")[0];
+            // 获取今日新品元素
+            var  xinpings=document.querySelectorAll("#box .xingshanpingBOX [data-target=tab]");
+            //绑定事件滚动事件
             window.onscroll = function () {
                 //获取滚动条滚动过的距离
                 var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
                 // 当滚动到<指定位置>时
-                if (scrollTop >= 100) {
+                if (scrollTop>=1) {
+                    // //给轮播图元素添加类:className
+                    lun.className = "fixed";
+                } 
+                if(scrollTop>=1){
                     for (var img of imgs) {
-                        //给元素添加类:className
-                        img.className = "fixed";
+                    //给推荐图元素添加类:className
+                    img.className = "fixed";
                     }
-
+                }
+                if(scrollTop>=400){
+                    //遍历每个上新商品图元素
+                    for(var xinping of xinpings){
+                        //给今日上新商品图元素添加类:className
+                    xinping.className = "fixed";
+                    }
                 }
             }
 
         }
+    })();
     </script>
 </body>
 

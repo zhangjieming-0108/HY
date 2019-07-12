@@ -14,6 +14,10 @@
 	box-sizing:border-box;
 
 }
+/* 滚动条到达指定位置执行的动画  */
+#box .lunbo .fixed{
+	animation:zoomInLeft 2s;
+}
 /*推荐品*/
 .tuijian{
 	width:100%;height:330px;
@@ -78,6 +82,7 @@
 .xingheader .xiaoheader a:hover{
 	background:#000;
 }
+/* 今日上新商品 */
 .xingshanpingBOX{
 	width:100%;height:387px;
 	box-sizing:border-box;
@@ -92,7 +97,12 @@
 	margin:38px 5px;
 	transition:0.4s;
 }
-}
+/* 滚动条到达指定位置执行的动画  */
+.xingshanpingBOX .fixed:first-child{animation:fadeInUp 1s;}
+.xingshanpingBOX .fixed:nth-child(2){animation:fadeInUp 1.5s;}
+.xingshanpingBOX .fixed:nth-child(3){animation:fadeInUp 2s;}
+.xingshanpingBOX .fixed:last-child{animation:fadeInUp 2.5s;}
+
 .xingshanpingBOX div img,.xingshanpingBOX div span{
 	display:block;
 	margin:1px auto;
