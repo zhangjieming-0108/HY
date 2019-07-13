@@ -65,7 +65,7 @@
 }
 /* 姓名 */
 .close .close-s .site p{
-  width: 100%;  height: 69px;
+  width: 100%;  height: 75px;
   display: flex;
   justify-content: space-between;
 }
@@ -96,17 +96,29 @@
     line-height: 50px;
 }
 /* 邮寄到另一个地址 */
-.close .close-s .site span:nth-child(18){
-    width:100%;height: 19px;
-    margin-top:14px;
+.close .close-s .site .billing_different-address{
+    display: flex;
+    margin-top:18px;
 }
-.close .close-s .site span:nth-child(18) label{
-    width: auto;height: auto;
-    margin-top:0;
-    line-height: 0;
+.close .close-s .site .billing_different-address label{
+    margin-top: 6px;
+    line-height:0;
+    height:19px;
+    width: auto;
+
 }
-.close .close-s .site span:nth-child(18) input{
-    width: auto;height: auto;
-    line-height: 0;
-    padding: 0;
+.close .close-s .site .billing_different-address  input{
+    height: auto;
+    width: auto;
+}
+/* 右边的订单详情 */
+.close .details{
+    width: 45%;height: 526px;
+    padding: 30px;
+    color: #494949;
+}
+.close .details .order-review{
+    width: 100%;height: 526px;
+    color: #494949;
+    border: 5px solid #494949;
 }
