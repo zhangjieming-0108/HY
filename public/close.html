@@ -17,6 +17,7 @@
             <!-- 账单地址 -->
             <div class="site">
                 <h3>账单地址</h3>
+                <!-- 国家、地区 -->
                 <label for="country">国家/地区 *</label>
                 <span>
                     <select name="provs" id="country">
@@ -32,6 +33,53 @@
                         <option value="">意大利</option>
                     </select>
                     <select name="cities" class="hide"></select>
+                </span>
+                <!-- 姓名 -->
+                <p>
+                    <span>
+                        <label for="billing_last_name">姓 *</label>
+                        <input type="text" id="billing_last_name">
+                    </span>
+                    <span>
+                        <label for="billing_first_name">名 *</label>
+                        <input type="text" id="billing_first_name">
+                    </span>
+                </p>
+                <!-- 公司名称 -->
+                 <label for="billing_company">公司名称 *</label>
+                <input type="text" id="billing_company">
+                <!-- 地址 -->
+                <label for="billing_addres">地址 *</label>
+                <input type="text" id="billing_addres" placeholder="地址"> 
+                <!-- 房间号 -->
+                <input type="text"placeholder="楼层、房间号（可选）"> 
+                <!-- 镇/市 -->
+                <label for="billing_city">镇/市 *</label>
+                <input type="text" id="billing_city" placeholder="镇/市">
+                <!--邮政偏码  -->
+                <label for="billing_postcode">邮政偏码 *</label>
+                <input type="text" id="billing_postcode" placeholder="邮政偏码">
+                <!-- emali和电话 -->
+                <p>
+                    <span>
+                        <label for="billing_email">Emali 地址 *</label>
+                        <input type="text" id="billing_email">
+                    </span>
+                    <span>
+                        <label for="billing_phone">电话 *</label>
+                        <input type="text" id="billing_phone">
+                    </span>
+                </p>
+                <!-- 账户密码* -->
+                <span>请输入以下信息快速注册帐号，如果您已有帐号，请先登录再结算。
+                </span>
+                <!-- 账户密码* -->
+                <label for="billing_password">账户密码 *</label>
+                <input type="text" id="billing_password" placeholder="密码">
+                <!-- 邮寄到另一个地址  -->
+                <span>
+                    <label for="billing_different-address">邮寄到另一个地址？</label>
+                    <input type="checkbox" id="billing_different-address">
                 </span>
             </div>
             <!-- 订单详情 -->

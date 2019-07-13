@@ -31,14 +31,14 @@
     flex-direction: column;
 }
 /* 标题 */
-.close .close-s h3{
+.close .close-s .site h3{
     width: 100%;height: 31px;
     font:24px 微软雅黑,Helvetica,Arial,Verdana,sans-serif;
     color: black;
     font-weight: bold;
 }
-/* 国家收货地区选项 */
-.close .close-s label{
+/* label和input的公共属性 */
+.close .close-s .site label{
     width: 100%;height: 28px;
     font: 14px 微软雅黑,Helvetica,Arial,Verdana;
     color: #494949;
@@ -46,14 +46,67 @@
     font-weight: bold;
     margin-top: 14px;
 }
-.close .close-s span{
+.close .close-s .site input{
+    width: 100%;height: 37px;
+    padding: 5px;
+}
+/* 国家地区选项 */
+.close .close-s .site span{
     width: 100%;height: 37px;
     display: flex;
 }
-.close .close-s span select{
-    width: 50%;height: 37px;
+.close .close-s .site span select{
+    width:50%;height: 37px;
 }
-.close .close-s span .hide{
+/* 选中显示的功能 */
+.close .close-s .site span .hide{
     width: 50%;height: 37px;
     display: none;
+}
+/* 姓名 */
+.close .close-s .site p{
+  width: 100%;  height: 69px;
+  display: flex;
+  justify-content: space-between;
+}
+.close .close-s .site p span:first-child{
+    width: 48%;height: 75px;
+    display: flex;
+    flex-direction: column;
+}
+.close .close-s .site p span:last-child{
+    width: 45%;height: 75px;
+    display: flex;
+    flex-direction: column;
+}
+/* 姓名输入框 */
+.close .close-s .site p span input{
+    height:43px;
+    padding: 5px;
+}
+/* 房间号 */
+.close .close-s .site input:nth-child(9){
+    margin-top:15px;
+}
+/* 快速注册帐号文本 */
+.close .close-s .site span{
+    width: 100%;height:50px;
+    font: 14px 微软雅黑;
+    color:#777777;
+    line-height: 50px;
+}
+/* 邮寄到另一个地址 */
+.close .close-s .site span:nth-child(18){
+    width:100%;height: 19px;
+    margin-top:14px;
+}
+.close .close-s .site span:nth-child(18) label{
+    width: auto;height: auto;
+    margin-top:0;
+    line-height: 0;
+}
+.close .close-s .site span:nth-child(18) input{
+    width: auto;height: auto;
+    line-height: 0;
+    padding: 0;
 }
