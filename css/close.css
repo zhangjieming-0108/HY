@@ -121,4 +121,47 @@
     width: 100%;height: 526px;
     color: #494949;
     border: 5px solid #494949;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.close .details .order-review h3{
+    width: 100%;height: 29px;
+    font: 22px 微软雅黑;
+    font-weight: bold; 
+    color: #000;
+}
+.close .details .order-review p{
+    width: 100%;height: 30px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 30px;
+    border-bottom: 1px solid #777777;
+    margin-top:13px;
+}
+.close .details .order-review p span{
+    font-weight: bold;
+    font: 16px 微软雅黑;border-bottom: 0;
+}
+.close .details .order-review p:nth-child(3){
+    width: 100%;height: 56px;
+}
+.close .details .order-review p:nth-child(3) span:first-child{
+    width: 100%;height: 56px;
+    display: flex;
+}
+.close .details .order-review p:nth-child(3) span:first-child img{
+    width: 40px;height: 40px;
+    line-height: 56px;
+}
+.close .details .order-review p:nth-child(3) span:first-child span a{
+    text-decoration: none;
+    color: #494949;
+    line-height: 56px;
+}
+.close .details .order-review p:nth-child(3) span:first-child span{
+    line-height: 56px;
+}
+.close .details .order-review p:nth-child(3) span:last-child{
+    line-height: 56px;
 }
