@@ -1,19 +1,82 @@
 *{margin:0;padding:0}
 /* 全局 */
 #box{
-	min-width: 1260px;
+	width: 1260px;
 	margin: 0 auto;
 }
 /*轮播图*/
 .lunbo {
+	width:1260px;height:464px;
 	display: inline-block;
 	margin:-4px;
+	overflow:hidden;
+    position:relative;
 }
-.lunbo img{
-	width:100%;height:464px;
-	box-sizing:border-box;
+.lunbo ul:nth-child(2){
+	list-style: none;
+	display: inline-block;
+	width:3780px;height:464px;
+	margin-left:0px;
+}
+/* 过度时间 */
+.lunbo ul .transition{
+	transition:all .5s linear;
+ }
+ /* 轮播图每张图片 */
+.lunbo ul li,.lunbo ul li img{
+	width:1260px;height:464px;
+	display: inline-block;
+}
+/* 小圆点 */
+.lunbo ul:nth-child(3){
+	width:40px;
+      margin:0 auto;
+      list-style:none;
+      position:absolute;
+      bottom:25px;
+      left:50%;
+      margin-left:-50px;
+}
+.lunbo ul:nth-child(3) li{
+	float:left;
+      width:10px; height:10px;
+      background-color:#fff;
+      border-radius:5px;
+      margin:0 5px;
+      cursor:pointer;
+}
+.lunbo ul:nth-child(3) .active{
+	background-color:#dddddd;
+  }
+  /* 左右点击按钮 */
+  #btn-left,#btn-right{
+	width:60px;
+	height:100%;
+	position:absolute;
+	top:0;
+	background-repeat:no-repeat;
+	background-position:center;
+	cursor:pointer;
+  }
+/* 左按钮 */
+  #btn-left{
+	left:20px;
+	background-image:url("../images/chaolianjie1.png");
+  }
+  /* 右按钮 */
+  #btn-right{
+	right:20px;
+	background-image:url("../images/chaolianjie1.png");
+  }
+  /* 鼠标悬停效果 */
+  #btn-left:hover,#btn-right:hover{
+	background-size:40px 70px
+  }
 
-}
+
+
+
+
 /* 滚动条到达指定位置执行的动画  */
 #box .lunbo .fixed{
 	animation:zoomInLeft 2s;
