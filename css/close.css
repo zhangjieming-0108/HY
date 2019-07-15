@@ -125,23 +125,29 @@
     display: flex;
     flex-direction: column;
 }
+/* 右边的订单详情标题 */
 .close .details .order-review h3{
     width: 100%;height: 29px;
     font: 22px 微软雅黑;
     font-weight: bold; 
     color: #000;
 }
+/* p标签的公共样式 */
 .close .details .order-review p{
     width: 100%;height: 30px;
     display: flex;
     justify-content: space-between;
     line-height: 30px;
-    border-bottom: 1px solid #777777;
+    border-bottom: 1px dotted #777777;
     margin-top:13px;
 }
+.close .details .order-review p:nth-child(2){
+    border-bottom: 3px solid #777777;
+}
+/* 选中的商品 */
 .close .details .order-review p span{
     font-weight: bold;
-    font: 16px 微软雅黑;border-bottom: 0;
+    font: 16px 微软雅黑;
 }
 .close .details .order-review p:nth-child(3){
     width: 100%;height: 56px;
@@ -150,10 +156,12 @@
     width: 100%;height: 56px;
     display: flex;
 }
+/* 选中商品图片 */
 .close .details .order-review p:nth-child(3) span:first-child img{
     width: 40px;height: 40px;
     line-height: 56px;
 }
+/* 选中商品的文本 */
 .close .details .order-review p:nth-child(3) span:first-child span a{
     text-decoration: none;
     color: #494949;
@@ -164,4 +172,64 @@
 }
 .close .details .order-review p:nth-child(3) span:last-child{
     line-height: 56px;
+}
+/* 银行支付方式 */
+.close .details .order-review p:nth-child(7){
+    border-bottom: 0;
+    justify-content: flex-start;
+    align-items: center;
+}
+.close .details .order-review p:nth-child(8){
+    font:15px 微软雅黑;
+    color: #777777;
+    width: 100%;height: 56px;
+}
+.close .details .order-review .content{
+    display: none;
+}
+/* 支付宝支付方式 */
+.close .details .order-review p:nth-child(9){
+    border-bottom: 0;
+    justify-content: flex-start;
+    align-items: center;
+}
+.close .details .order-review p:nth-child(9) img{
+    width: 72px;height: 24px;
+    margin-left: 7px;
+}
+.close .details .order-review p:last-child{
+    font:15px 微软雅黑;
+    color: #777777;
+    width: 100%;height: 56px;
+}
+.close .details .order-review .content1{
+    display: none;
+}
+.close .details .order-review button{
+    width: 84px;height: 40px;
+    display: inline-block;
+    background: #777777;
+    border:0;
+    color: #fff;
+    margin-top:31px;
+}
+/* 优惠卷 */
+.close .coupon{
+    width: 100%;
+    height: 120px;
+    border-top: 3px solid #777777;
+    border-bottom: 3px solid #777777;
+    display: flex;
+    flex-direction: column;
+}
+.close .coupon input{
+    width: 320px;height: 37px;
+    margin: 16px 0;
+    padding: 5px  10px;
+}
+.close .coupon button{
+    width: 320px;height: 34px;
+    border: 0;
+    background: #777777;
+    color: #fff;
 }

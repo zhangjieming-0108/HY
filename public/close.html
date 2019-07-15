@@ -88,34 +88,61 @@
             <!-- 订单详情 -->
             <div class="details">
                 <div class="order-review">
+                    <!-- 标题 -->
                     <h3>订单详情</h3>
                     <p>
                         <span>商品</span>
                         <span>合计</span>
                     </p>
+                    <!-- 选中的提交的商品 -->
                     <p>
                         <span>
                             <img src="../images/shanping001.jpg" alt="图片已损坏">
-                            <span><a href="">植物花卉001</a></span>
+                            <span><a href="#">植物花卉001</a></span>
                             <span>x1</span>
                         </span>
                         <span>￥5900</span>
                     </p>
+                    <!-- 小计 -->
                     <p>
                         <span>购物车小计</span>
                         <span>￥5900</span>
                     </p>
+                    <!-- 运费 -->
                     <p>
                         <span>运费</span>
                         <span>免费送货</span>
                     </p>
+                    <!-- 总价 -->
                     <p>
                         <span>订单总计</span>
                         <span>￥5900</span>
                     </p>
+                    <!-- 支付方式 -->
+                    <p>
+                        <input type="radio" id="payment_method_bacs">
+                        <label for="payment_method_bacs">银行汇款（线下）</label>
+                    </p>
+                    <p class="content">
+                            直接付款到我们的银行账户。请使用订单号作为付款名目。我们会在资金到账后配送订单。
+                    </p>
+                    <!-- 支付宝支付 -->
+                    <p>
+                            <input type="radio" id="payment_method_zfb">
+                            <label for="payment_method_zfb">支付宝</label>
+                            <img src="../images/zfb_pay.png" alt="图片已损坏">
+                        </p>
+                        <p class="content1">
+                                使用支付宝付款，如果您没有支付宝账户，也可通过借记卡或信用卡付款。
+                        </p>
+                        <button>下单</button>
                 </div>
             </div>
             
+        </div>
+        <div class="coupon">
+            <input type="text" placeholder="优惠卷代码">
+            <button>使用优惠卷</button>
         </div>
     </div>
     <script>
