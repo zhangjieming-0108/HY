@@ -15,7 +15,7 @@
         <!--轮播图-->
         <div class="lunbo">
             <div id="btn-left"></div>
-            <ul>
+            <ul class="transition">
                 <li><img data-target="tab" src="../images/lunbo1.jpg" alt="图片已损环" ></li>
                 <li><img src="../images/BJ.jpg" alt="图片已损坏"></li>
                 <li><img data-target="tab" src="../images/lunbo1.jpg" alt="图片已损环" /></li>
@@ -294,7 +294,98 @@
 
         }
     })();
+    // 轮播图功能
+    (function(){
+        var i=0;//显示的第几张图片，从0开始
+        var li_width=1260;//每张图片的固定宽度
+        var duration=500;//每次轮播的持续时间
+        var li_count=2;//小圆点的个数
+        // 获取要移动的ul
+        var ulImgs=document.querySelector(".lunbo ul:nth-child(2)");
+        // 获取包含小圆点的元素列表
+        var ulIdxs=ulImgs.nextElementSibling;
+        // 获取小圆点的元素列表
+        var lis=ulIdxs.children;
+        // 函数创建，从当前位置移动到任意一个范围内的位置
+        function moveTo(to){
+            //如果用户没有传入要跳到第几张图，就默认跳到当前图的下张
+            if(to==undefined){
+                to=i+1;
+            } 
+           //如果滚动从头开始，再重新加上transition
+           if(i==0){ 
+                if(to>i){
+                    ulImgs.className="transition";
+                }else{
+                    ulImgs.className="";
+                    //将ulImgs拉取到最左侧
+                    ulImgs.style.marginLeft=-li_width*li_count+"px";
+                    setTimeout(function(){
+                        moveTo(li_count-1);
+                    },100);
+                    return;                 
+                }
+            } 
+           //先将表示第几张图片的变量i变为目标位置
+           i=to; 
+           //再用i计算ulimgs的marginLeft距离
+           ulImgs.style.marginLeft=-i*li_width+"px";
+           //先删除所有小圆点的class
+           for(var li of lis){
+               li.className="";
+           }
+           if(i==li_count){
+               i=0;
+               //当transition动画播放完之后，才
+               setTimeout(function(){
+                   //清掉transition属性
+                ulImgs.className="";
+                //将ulImgs拉回0位置
+                ulImgs.style.marginLeft=0;
+               },duration);
+           }
+           //再给当前位置的小圆点添加class active
+            lis[i].className="active";
+        }
+        // 获取左右点击按钮
+        var btnLeft=document.getElementById("btn-left");
+        var btnRight=document.getElementById("btn-right");
+        //用开关，控制，上次动画没有播放完，下次动画不能开始！
+        var canClick=true;
+        btnRight.onclick=function(){
+            move(1); 
+        }
+        function move(n){
+            if(canClick){//只有可以单击时
+                 moveTo(i+n);//才调用真正移动ul的方法
+                canClick=false;//马上把开关关上，禁止再次点击
+                //只有本地transition动画播放完，才能自动打开开关，点击按钮才有反应。
+                setTimeout(function(){
+                canClick=true;
+                },duration+100);
+            }
+        }
+        btnLeft.onclick=function(){
+            move(-1);
+        }
+        //每次轮播之间间隔事件是2秒
+        var interval=3000;
+        var timer=setInterval(function(){
+            moveTo();
+        },3000);
+        // 获取轮播图显示界面
+        var lunbo=document.querySelector("#box>.lunbo>ul:nth-child(2)");
+        // 单鼠标悬停的时候清除周期性定时器
+        lunbo.onmouseover=function(){
+            clearInterval(timer);
+        }
+        // 单鼠标离开的时候启动周期性定时器
+        lunbo.onmonseout=function(){
+            timer=setInterval(function(){
+                moveTo();
+            },3000);
+        }
+    })();
     </script>
 </body>
-
 </html>

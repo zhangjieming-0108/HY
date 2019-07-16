@@ -19,7 +19,7 @@
 	margin-left:0px;
 }
 /* 过度时间 */
-.lunbo ul .transition{
+.lunbo .transition{
 	transition:all .5s linear;
  }
  /* 轮播图每张图片 */
@@ -27,7 +27,7 @@
 	width:1260px;height:464px;
 	display: inline-block;
 }
-/* 小圆点 */
+/* 小圆点列表 */
 .lunbo ul:nth-child(3){
 	width:40px;
       margin:0 auto;
@@ -37,6 +37,7 @@
       left:50%;
       margin-left:-50px;
 }
+/* 每个小圆点 */
 .lunbo ul:nth-child(3) li{
 	float:left;
       width:10px; height:10px;
