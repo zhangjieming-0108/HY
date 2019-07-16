@@ -14,8 +14,8 @@
     <div id="box">
         <!--轮播图-->
         <div class="lunbo">
-            <div id="btn-left"></div>
-            <ul class="transition">
+            <div id="btnLeft"></div>
+            <ul>
                 <li><img data-target="tab" src="../images/lunbo1.jpg" alt="图片已损环" ></li>
                 <li><img src="../images/BJ.jpg" alt="图片已损坏"></li>
                 <li><img data-target="tab" src="../images/lunbo1.jpg" alt="图片已损环" /></li>
@@ -24,7 +24,7 @@
                 <li class="active"></li>
                 <li></li>
             </ul>
-            <div id="btn-right"></div>
+            <div id="btnRight"></div>
         </div>
         <!--推荐品-->
         <div class="tuijian">
@@ -348,8 +348,8 @@
             lis[i].className="active";
         }
         // 获取左右点击按钮
-        var btnLeft=document.getElementById("btn-left");
-        var btnRight=document.getElementById("btn-right");
+        var btnLeft=document.getElementById("btnLeft");
+        var btnRight=document.getElementById("btnRight");
         //用开关，控制，上次动画没有播放完，下次动画不能开始！
         var canClick=true;
         btnRight.onclick=function(){
@@ -368,7 +368,7 @@
         btnLeft.onclick=function(){
             move(-1);
         }
-        //每次轮播之间间隔事件是2秒
+        //每次轮播之间间隔事件是3秒
         var interval=3000;
         var timer=setInterval(function(){
             moveTo();
@@ -380,10 +380,28 @@
             clearInterval(timer);
         }
         // 单鼠标离开的时候启动周期性定时器
-        lunbo.onmonseout=function(){
+        lunbo.onmouseout=function(){
             timer=setInterval(function(){
                 moveTo();
             },3000);
+        }
+        ulIdxs.onclick=function(e){
+            if(canClick){
+                var li=e.target;
+                if(li.nodeName=="LI"){
+                    if(li.className!=="active"){
+                        for(var i=0;i<lis.length;i++){
+                            if(lis[i]==li){
+                                break;
+                            }
+                        }
+                        moveTo(i);
+                        setTimeout(function(){
+                            canClick=true;
+                        },duration);
+                    }
+                }
+            }
         }
     })();
     </script>

@@ -50,7 +50,7 @@
 	background-color:#dddddd;
   }
   /* 左右点击按钮 */
-  #btn-left,#btn-right{
+  #btnLeft,#btnRight{
 	width:60px;
 	height:100%;
 	position:absolute;
@@ -60,17 +60,17 @@
 	cursor:pointer;
   }
 /* 左按钮 */
-  #btn-left{
+  #btnLeft{
 	left:20px;
 	background-image:url("../images/chaolianjie1.png");
   }
   /* 右按钮 */
-  #btn-right{
+  #btnRight{
 	right:20px;
 	background-image:url("../images/chaolianjie1.png");
   }
   /* 鼠标悬停效果 */
-  #btn-left:hover,#btn-right:hover{
+  #btnLeft:hover,#btnRight:hover{
 	background-size:40px 70px
   }
 
