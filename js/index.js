@@ -187,3 +187,28 @@
         }
     }
 })();
+
+// 限时促销的倒计时功能
+(function(){
+    setInterval(function(){
+    // 获取现在的时间
+    var nowTime=new Date();
+    // 目标时间
+    var gerTime=new Date("2030/5/20");
+    // 相差的时间
+    var toTime=gerTime-nowTime;
+    var d=Math.floor(toTime/1000/60/60/24);
+    var h=Math.floor(toTime/1000/60/60%24);
+    var m=Math.floor(toTime/1000/60%60);
+    var s=Math.floor(toTime/1000%60);
+    console.log(d);
+    document.querySelector("#box>.xianshibox>.xianshibox1>div>p>span:first-child").innerHTML=d;
+    document.querySelector("#box>.xianshibox>.xianshibox1>div>p>span:nth-child(2)").innerHTML=h;
+    document.querySelector("#box>.xianshibox>.xianshibox1>div>p>span:nth-child(3)").innerHTML=m;
+    document.querySelector("#box>.xianshibox>.xianshibox1>div>p>span:last-child").innerHTML=s;
+    document.querySelector("#box>.xianshibox>.xianshibox2>div>p>span:first-child").innerHTML=d;
+    document.querySelector("#box>.xianshibox>.xianshibox2>div>p>span:nth-child(2)").innerHTML=h;
+    document.querySelector("#box>.xianshibox>.xianshibox2>div>p>span:nth-child(3)").innerHTML=m;
+    document.querySelector("#box>.xianshibox>.xianshibox2>div>p>span:last-child").innerHTML=s;
+    },1000);
+})();
