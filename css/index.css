@@ -6,17 +6,19 @@
 }
 /*轮播图*/
 .lunbo {
-	width:1260px;height:464px;
+	width:1260px;height:413px;
 	display: inline-block;
 	margin:-4px;
 	overflow:hidden;
-    position:relative;
+	position:relative;
+	opacity:0.9;
 }
 .lunbo ul:nth-child(2){
 	list-style: none;
 	display: inline-block;
 	width:3780px;height:464px;
 	margin-left:0px;
+	display:flex;
 }
 /* 过度时间 */
 .lunbo .transition{
@@ -35,7 +37,7 @@
       position:absolute;
       bottom:25px;
       left:50%;
-      margin-left:-50px;
+      margin-left:-20px;
 }
 /* 每个小圆点 */
 .lunbo ul:nth-child(3) li{
@@ -62,21 +64,17 @@
 /* 左按钮 */
   #btnLeft{
 	left:20px;
-	background-image:url("../images/chaolianjie1.png");
+	background-image:url("../images/left_ar.png");
   }
   /* 右按钮 */
   #btnRight{
 	right:20px;
-	background-image:url("../images/chaolianjie1.png");
+	background-image:url("../images/right_ar.png");
   }
   /* 鼠标悬停效果 */
   #btnLeft:hover,#btnRight:hover{
 	background-size:40px 70px
   }
-
-
-
-
 
 /* 滚动条到达指定位置执行的动画  */
 #box .lunbo .fixed{
