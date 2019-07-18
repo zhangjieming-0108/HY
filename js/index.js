@@ -188,20 +188,39 @@
     }
 })();
 
+
+//轮播图中间的文字功能
+(function(){
+    var span=document.querySelector("#box .lunbo span:nth-child(4)");
+    setInterval(function(){
+        span.className="hidden";
+    },2000);
+    setInterval(function(){
+        if(span.className="hidden"){
+            span.className="";
+        }
+    },3000);
+})();
+
+
 // 限时促销的倒计时功能
 (function(){
     setInterval(function(){
     // 获取现在的时间
     var nowTime=new Date();
     // 目标时间
-    var gerTime=new Date("2030/5/20");
+    var gerTime=new Date("2022/5/20");
     // 相差的时间
     var toTime=gerTime-nowTime;
+    // 相差的天数
     var d=Math.floor(toTime/1000/60/60/24);
+    // 相差的小时
     var h=Math.floor(toTime/1000/60/60%24);
+    // 相差的分钟  
     var m=Math.floor(toTime/1000/60%60);
+    // 相差的秒数
     var s=Math.floor(toTime/1000%60);
-    console.log(d);
+    //将相差相应的时间赋值给页面中对应的元素内容
     document.querySelector("#box>.xianshibox>.xianshibox1>div>p>span:first-child").innerHTML=d;
     document.querySelector("#box>.xianshibox>.xianshibox1>div>p>span:nth-child(2)").innerHTML=h;
     document.querySelector("#box>.xianshibox>.xianshibox1>div>p>span:nth-child(3)").innerHTML=m;

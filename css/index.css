@@ -71,6 +71,20 @@
 	right:20px;
 	background-image:url("../images/right_ar.png");
   }
+  /* 轮播图中间的文字 */
+  #box .lunbo span:nth-child(4){
+	  width: 270px;height: 56px;
+	  position: absolute;
+	  left: 50%;top:50%;
+	  margin-left: -135px;
+	  margin-top: -28px;
+	  font:56px 微软雅黑;
+	  color: #fff;
+
+  }
+  #box .lunbo span:nth-child(4).hidden{
+	  display: none;
+  }
   /* 鼠标悬停效果 */
   #btnLeft:hover,#btnRight:hover{
 	background-size:40px 70px
