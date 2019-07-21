@@ -16,8 +16,8 @@
     padding: 0 5%;
     background: url("../images/titlebj.png");
     align-items: center;
-    border-top: 1px solid #595959;
-    border-bottom: 1px solid #595959;
+    border-top: 1px dashed #595959;
+    border-bottom: 1px dashed #595959;
 }
 .individual_nav li a{
     margin:0 8px;
