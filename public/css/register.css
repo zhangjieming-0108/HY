@@ -1,9 +1,10 @@
 *{margin:0;padding:0}
 /* 注册页面 */
 .register_box{
-    width: 100%;height:700px;
+    width: 1260px;height:700px;
     box-sizing: border-box;
     background:url("../images/BJ.jpg");
+    margin:-4px auto;
     display: flex;
     justify-content: center;
     align-items: center;

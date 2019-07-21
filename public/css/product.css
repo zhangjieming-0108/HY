@@ -1,4 +1,5 @@
 *{margin:0;padding:0}
+#box{width: 1260px; margin: 0 auto;}
 /* 头部图片 */
 .header_tupain{
     box-sizing: border-box;

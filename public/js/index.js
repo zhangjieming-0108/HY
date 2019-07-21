@@ -31,39 +31,39 @@
             //获取滚动条滚动过的距离
             var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
             // 当滚动到<指定位置>时
-            if (scrollTop >= 150) {
+            if (scrollTop >= 540) {
                 //遍历每个上新商品图元素
                 for (var xinping of xinpings) {
                     //给今日上新商品图元素添加类:className
                     xinping.className = "fixed";
                 }
             }
-            if (scrollTop >= 550) {
+            if (scrollTop >= 1040) {
                 //遍历每个限时商品元素
                 for (var xianshibox of xianshiboxs) {
                     //给限时商品图元素添加id;
                     xianshibox.id = "fixed";
                 }
             }
-            if (scrollTop >= 900) {
+            if (scrollTop >= 1700) {
                 //给花语的概括介绍文本的元素添加id;
                 text.id = "fixed";
             }
-            if (scrollTop >= 1300) {
+            if (scrollTop >= 2000) {
                 //遍历每个家园商品元素
                 for (var jiayuan of jiayuans) {
                     //给限时商品图元素添加id;
                     jiayuan.id = "fixed";
                 }
             }
-            if (scrollTop >= 1900) {
+            if (scrollTop >= 2500) {
                 //遍历花语门店的活动及概要样式的左右两边元素
                 for (var hua_bot_list of hua_bot_lists) {
                     //给花语门店的活动及概要样式元素添加id;
                     hua_bot_list.id = "fixed";
                 }
             }
-            if (scrollTop >= 2200) {
+            if (scrollTop >= 2950) {
                 //遍历运输 、礼品、 服务、 优惠券相关元素
                 for (var index_yun_li_fu_you of index_yun_li_fu_yous) {
                     //给运输 、礼品、 服务、 优惠券相关元素添加id;
@@ -80,8 +80,8 @@
 (function(){
     var i = 0; //显示的第几张图片，从0开始
     var li_width = 1260; //每张图片的固定宽度
-    var duration = 500; //每次轮播的持续时间
-    var li_count = 2; //小圆点的个数
+    var duration = 1000; //每次轮播的持续时间
+    var li_count = 2; //li的位置
     // 获取要移动的ul
     var ulImgs = document.querySelector(".lunbo ul:nth-child(2)");
     // 获取包含小圆点的元素列表

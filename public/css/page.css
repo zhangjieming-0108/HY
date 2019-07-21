@@ -1,4 +1,7 @@
 *{margin: 0;padding: 0}
+#box{
+    width: 1260px; margin: 0 auto;
+}
 /* 在线支付、银行转账、货到付款整个的样式 */
 .pay_header,.pay_middle,.pay_footer{
     box-sizing: border-box;

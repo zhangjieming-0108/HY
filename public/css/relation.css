@@ -1,7 +1,7 @@
 *{margin:0;padding:0}
 #box{
-    max-width: 1115px;
-    margin: 0 auto;
+    width: 1260px;
+    margin: -4px auto;
 }
 /* 头部图片 */
 .header_tupain{

@@ -1,7 +1,9 @@
 *{margin: 0;padding: 0;}
 /* 总体布局 */
 .shop{
-    width:100%;min-width: 820px;
+    width:1260px;
+    margin: -4px auto;
+    box-sizing: border-box;
 }
 .shop_l{
     width: 70%;

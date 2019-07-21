@@ -1,14 +1,14 @@
 *{margin:0;padding:0}
 /* 全局 */
 #box{
-	width: 1260px;
-	margin: 0 auto;
+	width:1260px;
+	margin:-4px auto;
+	box-sizing: border-box;
 }
 /*轮播图*/
 .lunbo {
-	width:1260px;height:413px;
+	width: 1260px;;height:413px;
 	display: inline-block;
-	margin:-4px;
 	overflow:hidden;
 	position:relative;
 	opacity:0.8;

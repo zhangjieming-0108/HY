@@ -1,4 +1,5 @@
 *{margin:0;padding: 0}
+footer{width: 1260px; margin: 0 auto;display: block;}
 .bottombox1{
 	width:100%;height:349px;
 	display:flex;

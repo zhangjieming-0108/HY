@@ -3,8 +3,9 @@
 }
 /* 总体布局 */
 #box{
-    max-width: 1400px;
-    margin: 0 auto;
+    width: 1260px;
+    margin: -4px auto;
+    box-sizing: border-box;
 }
 /* 面包线导航 */
 .individual_nav{
