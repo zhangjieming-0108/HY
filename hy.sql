@@ -2,7 +2,7 @@ SET NAMES UTF8;
 DROP DATABASE IF EXISTS hy;
 CREATE DATABASE hy CHARSET=UTF8;
 USE hy;
-#网站的基本信息
+-- 网站的基本信息
 CREATE TABLE hy_site_info(
    site_name VARCHAR(16),
    login VARCHAR(64),
@@ -11,7 +11,7 @@ CREATE TABLE hy_site_info(
 INSERT INTO hy_site_info VALUES("花语","images/logo.ong","
 Copyright © 2010-2015花语文化传播有限公司 All rights reserved
 ");
-#导航条目
+-- 导航条目
 CREATE TABLE hy_navbar_item(
    name VARCHAR(16),
    url VARCHAR(64),
@@ -23,7 +23,7 @@ INSERT INTO hy_navbar_item VALUES
 ("支付方式","/index.html","多手段支付"),
 ("关于花语","/index.html","联系我们"),
 ("线下门店","/index.html","点击获取");
-#轮播图
+-- 轮播图
 CREATE TABLE hy_carousel_item(
    cid INT PRIMARY KEY AUTO_INCREMENT,
    pic VARCHAR(128),
@@ -33,21 +33,39 @@ CREATE TABLE hy_carousel_item(
 INSERT INTO hy_carousel_item VALUES
 (NULL,"images/LU.png","/m1.html","HUAYU"),
 (NULL,"images/LU1.png","/m2.html","HUAYU");
-#商品列表
-CREATE TABLE hy_new_product(
-   pic INT NOT NULL,
+/****首页商品****/
+CREATE TABLE hy_index_product(
+ pic INT PRIMARY KEY AUTO_INCREMENT,
    title  VARCHAR(16),
    img VARCHAR(128),
    price DECIMAL(10,2)
 );
 INSERT INTO hy_new_product VALUES
-(1,"植物花卉001","images/SP.png",5900),
-(2,"植物花卉004","images/SP1.png",6000),
-(3,"植物花卉006","images/SP2.png",5000),
-(4,"植物花卉008","images/SP3.png",4000);
+(NULL,"植物花卉001","images/shanping001.jpg",5900),
+(NULL,"植物花卉002","images/shanping002.jpg",6000),
+(NULL,"植物花卉003","images/shanping003.jpg",5000),
+(NULL,"植物花卉004","images/shanping004.jpg",4000);
+
+-- 商品列表
+CREATE TABLE hy_new_product(
+   pic INT PRIMARY KEY AUTO_INCREMENT,
+   title  VARCHAR(16),
+   img VARCHAR(128),
+   price DECIMAL(10,2)
+);
+INSERT INTO hy_new_product VALUES
+(NULL,"植物花卉001","images/shanping001.jpg",5900),
+(NULL,"植物花卉002","images/shanping002.jpg",6000),
+(NULL,"植物花卉003","images/shanping003.jpg",5000),
+(NULL,"植物花卉004","images/shanping004.jpg",4000);
+(NULL,"植物花卉005","images/shanping005.jpg",5500);
+(NULL,"植物花卉006","images/shanping006.jpg",6500);
+(NULL,"植物花卉007","images/shanping007.jpg",7000);
+(NULL,"植物花卉008","images/shanping008.jpg",4500);
+(NULL,"植物花卉009","images/shanping009.jpg",5500);
 
 
-#用户表
+-- 用户表
 CREATE TABLE hy_user(
    uid INT PRIMARY KEY AUTO_INCREMENT,
    uname  VARCHAR(32),
