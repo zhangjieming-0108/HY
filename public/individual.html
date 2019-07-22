@@ -21,16 +21,16 @@
     <!-- 主体 -->
     <div class="individual_sec">
         <!-- 主体左 -->
-       <div class="individual_sec_l">
+       <div class="individual_sec_l" id="individual_sec_l">
            <!-- 上部分 -->
            <div class="con">
-               <img src="images/shanping001.jpg" alt="图片已损坏">
-               <img src="images/shanping001.jpg" alt="图片已损坏">
+               <img :src="img" alt="图片已损坏">
+               <img :src="img" alt="图片已损坏">
            </div>
            <!-- 商品详细信息 -->
            <div class="sum">
-               <h3>植物花卉001</h3>
-               <h2>¥5900</h2>
+               <h3 v-text="title"></h3>
+               <h2 v-text="`¥${price.toFixed(2)}`"></h2>
                <p>商品编号： 004007</p>
                <p>
                   <span>分类：</span>
@@ -137,6 +137,7 @@
 </div>
 <footer id="footer"></footer>
 <script src="js/jquery-3.2.1.js"></script>
+<script src="js/vue.js"></script>
 <script src="js/header.js"></script>
 <script src="js/footer.js"></script>
 <script src="js/individual.js"></script>

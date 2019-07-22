@@ -18,3 +18,34 @@
         }
     }
 })();
+
+
+
+// 从数据库获取商品详情信息
+$(function(){
+    var pic=location.search.split("=")[1];
+    //只有pic是有值时，才执行查找操作
+    if(pic){
+      $.ajax({
+        url:"http://localhost:8080/individual",
+        type:"get",
+        data:{ pic },
+        dataType:"json",
+        success:function(result){
+            console.log(result);
+           var [{title, img, price, url, pic}]=result;
+                new Vue({
+                el:"#individual_sec_l",
+                    data:{
+                    title, 
+                    img, 
+                    price, 
+                    url, 
+                    pic
+                }
+            })
+            console.log(title);
+        }
+      })
+    }
+});

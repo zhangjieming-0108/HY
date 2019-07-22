@@ -40,26 +40,26 @@
                 <a href="product.html">+查看更多</a>
             </div>
         </div>
-        <div class="xingshanpingBOX">
+        <div class="xingshanpingBOX" id="xingshanpingBOX">
             <div class="xingshanping" data-target="tab">
-                <span><a href="individual.html"><img src="images/shanping001.jpg" alt="图片已损坏"></a></span>
-                <span>植物花卉001</span>
-                <span>￥5900</span>
+                <span><a :href="p1.url"><img :src="p1.img"  alt="图片已损坏"></a></span>
+                <span v-text="p1.title"></span>
+                <span v-text="`¥${p1.price.toFixed(2)}`"></span>
             </div>
             <div data-target="tab">
-                <span><a href="individual.html"><img src="images/shanping002.jpg" alt="图片已损坏"></a></span>
-                <span>植物花卉002</span>
-                <span>￥6900</span>
+                <span><a :href="p2.url"><img :src="p2.img"  alt="图片已损坏"></a></span>
+                <span v-text="p2.title"></span>
+                <span v-text="`¥${p2.price.toFixed(2)}`"></span>
             </div>
             <div data-target="tab">
-                <span><a href="individual.html"><img src="images/shanping003.jpg" alt="图片已损坏"></a></span>
-                <span>植物花卉003</span>
-                <span>￥5000</span>
+                <span><a :href="p3.url"><img :src="p3.img" alt="图片已损坏"></a></span>
+                <span v-text="p3.title"></span>
+                <span v-text="`¥${p3.price.toFixed(2)}`"></span>
             </div>
             <div data-target="tab">
-                <span><a href="individual.html"><img src="images/shanping004.jpg" alt="图片已损坏"></a></span>
-                <span>植物花卉004</span>
-                <span>￥6500</span>
+                <span><a :href="p4.url"><img :src="p4.img" alt="图片已损坏"></a></span>
+                <span v-text="p4.title"></span>
+                <span v-text="`¥${p4.price.toFixed(2)}`"></span>
             </div>
         </div>
         <!-- 限时促销 -->
@@ -222,6 +222,7 @@
     </div>
     <footer id="footer"></footer>
     <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/vue.js"></script>
     <script src="js/header.js"></script>
     <script src="js/footer.js"></script>
     <script src="js/index.js"></script>
