@@ -23,7 +23,7 @@ INSERT INTO hy_navbar_item VALUES
 ("支付方式","/index.html","多手段支付"),
 ("关于花语","/index.html","联系我们"),
 ("线下门店","/index.html","点击获取");
--- 轮播图
+/** 轮播图**/
 CREATE TABLE hy_carousel_item(
    cid INT PRIMARY KEY AUTO_INCREMENT,
    pic VARCHAR(128),
@@ -33,7 +33,9 @@ CREATE TABLE hy_carousel_item(
 INSERT INTO hy_carousel_item VALUES
 (NULL,"images/LU.png","/m1.html","HUAYU"),
 (NULL,"images/LU1.png","/m2.html","HUAYU");
-/****首页商品****/
+
+
+/****今日上新商品****/
 CREATE TABLE hy_index_product(
    pic INT PRIMARY KEY AUTO_INCREMENT,
    title  VARCHAR(16),
@@ -46,6 +48,19 @@ INSERT INTO hy_index_product VALUES
 (NULL,"植物花卉002","images/shanping002.jpg","individual.html?pic=2",6000),
 (NULL,"植物花卉003","images/shanping003.jpg","individual.html?pic=3",5000),
 (NULL,"植物花卉004","images/shanping004.jpg","individual.html?pic=4",4000);
+/**家园装点**/
+CREATE TABLE hy_index_product1(
+    pic INT PRIMARY KEY AUTO_INCREMENT,
+   title  VARCHAR(16),
+   img VARCHAR(128),
+   url VARCHAR(128),
+   price DECIMAL(10,2)
+);
+INSERT INTO hy_index_product1 VALUES
+(NULL,"植物花卉008","images/shanping001.jpg","individual.html?pic=8",4500),
+(NULL,"植物花卉006","images/shanping002.jpg","individual.html?pic=6",6500),
+(NULL,"植物花卉004","images/shanping003.jpg","individual.html?pic=4",4000),
+(NULL,"植物花卉002","images/shanping004.jpg","individual.html?pic=2",6000);
 
 -- 商品列表
 CREATE TABLE hy_product(
