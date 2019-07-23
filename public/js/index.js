@@ -239,19 +239,19 @@ $(function(){
       url:"http://localhost:8080/index",
       type:"get",
       dataType:"json",
-      //xhr.onreadystatechange=function
       success:function(result){
-        var [p1, p2, p3,p4]=result;
-        // var {title, img, price, href, pic}=p1;
-        new Vue({
-            el:"#xingshanpingBOX",
-            data:{
-              p1,
-              p2,
-              p3,
-              p4
-            }
-        })
+          console.log(result);
+    //     var [p1, p2, p3,p4]=result;
+    //     // var {title, img, price, href, pic}=p1;
+    //     new Vue({
+    //         el:"#xingshanpingBOX",
+    //         data:{
+    //           p1,
+    //           p2,
+    //           p3,
+    //           p4
+    //         }
+    //     })
       }  
     })
     
