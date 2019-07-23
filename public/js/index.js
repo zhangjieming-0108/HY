@@ -240,18 +240,23 @@ $(function(){
       type:"get",
       dataType:"json",
       success:function(result){
-          console.log(result);
-    //     var [p1, p2, p3,p4]=result;
-    //     // var {title, img, price, href, pic}=p1;
-    //     new Vue({
-    //         el:"#xingshanpingBOX",
-    //         data:{
-    //           p1,
-    //           p2,
-    //           p3,
-    //           p4
-    //         }
-    //     })
+          var {fresh,decoration}=result;
+        var [p1, p2, p3,p4]=fresh;
+        var [sp1,sp2,sp3,sp4]=decoration;
+        // var {title, img, price, href, pic}=p1;
+        new Vue({
+            el:"#box",
+            data:{
+              p1,
+              p2,
+              p3,
+              p4,
+              sp1,
+              sp2,
+              sp3,
+              sp4
+            }
+        })
       }  
     })
     

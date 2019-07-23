@@ -57,10 +57,10 @@ CREATE TABLE hy_index_product1(
    price DECIMAL(10,2)
 );
 INSERT INTO hy_index_product1 VALUES
-(NULL,"植物花卉008","images/shanping001.jpg","individual.html?pic=8",4500),
-(NULL,"植物花卉006","images/shanping002.jpg","individual.html?pic=6",6500),
-(NULL,"植物花卉004","images/shanping003.jpg","individual.html?pic=4",4000),
-(NULL,"植物花卉002","images/shanping004.jpg","individual.html?pic=2",6000);
+(NULL,"植物花卉008","images/shanping008.jpg","individual.html?pic=8",4500),
+(NULL,"植物花卉006","images/shanping006.jpg","individual.html?pic=6",6500),
+(NULL,"植物花卉004","images/shanping004.jpg","individual.html?pic=4",4000),
+(NULL,"植物花卉002","images/shanping002.jpg","individual.html?pic=2",6000);
 
 -- 商品列表
 CREATE TABLE hy_product(
