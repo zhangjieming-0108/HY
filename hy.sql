@@ -92,5 +92,5 @@ CREATE TABLE hy_user(
    gender   INT
 );
 INSERT INTO hy_user VALUES
-(NULL,"jieke","123456","13632454900@163.com","13632454900","images/avar","杰克",1),
-(NULL,"jierui","654321","18816799432@163.com","18816799432","images/avar","杰瑞",1);
+(NULL,"dingding","123456","13632454900@163.com","13632454900","images/avar","杰克",1),
+(NULL,"dongdong","654321","18816799432@163.com","18816799432","images/avar","杰瑞",1);
