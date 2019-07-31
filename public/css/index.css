@@ -198,10 +198,10 @@
 	color:#999999;
 }
 /* 滚动条到达指定位置执行的动画  */
-.xingshanpingBOX .fixed:first-child{animation:fadeInUp 2s;}
-.xingshanpingBOX .fixed:nth-child(2){animation:fadeInUp 3s;}
-.xingshanpingBOX .fixed:nth-child(3){animation:fadeInUp 4s;}
-.xingshanpingBOX .fixed:last-child{animation:fadeInUp 5s;}
+.xingshanpingBOX .fixed1:first-child{animation:fadeInUp 2s;}
+.xingshanpingBOX .fixed1:nth-child(2){animation:fadeInUp 3s;}
+.xingshanpingBOX .fixed1:nth-child(3){animation:fadeInUp 4s;}
+.xingshanpingBOX .fixed1:last-child{animation:fadeInUp 5s;}
 
 /* 焦点触发 */
 .xingshanpingBOX div:hover{
@@ -296,7 +296,7 @@
 	margin:10% 37%;
 }
 /* 滚动条到达指定位置执行的动画  */
-.midtu .midtu2 #fixed{animation:fadeInRight 4s;}
+.midtu .midtu2 #fixed1{animation:fadeInRight 4s;}
 /*家园装点*/
 .jiayuan{
 	width:100%;height:580px;
@@ -340,10 +340,10 @@
 	color: #bababa;
 }
 /* 滚动条到达指定位置执行的动画  */
-.jiayuan #fixed:first-child{animation:bounceInRight 2s;}
-.jiayuan #fixed:nth-child(2){animation:bounceInRight 3s;}
-.jiayuan #fixed:nth-child(3){animation:bounceInLeft 4s;}
-.jiayuan #fixed:last-child{animation:bounceInLeft 5s;}
+.jiayuan #fixed2:first-child{animation:bounceInRight 2s;}
+.jiayuan #fixed2:nth-child(2){animation:bounceInRight 3s;}
+.jiayuan #fixed2:nth-child(3){animation:bounceInLeft 4s;}
+.jiayuan #fixed2:last-child{animation:bounceInLeft 5s;}
 /*家园装点焦点样式*/
 .jiayuan .jiayuanbox:hover{
 	transform:translate(10px,2px) scale(0.8);
@@ -443,8 +443,8 @@
 	margin-left:15px;
 }
 /* 滚动条到达指定位置执行的动画  */
-.hua_bot_list #fixed:first-child{animation:bounceInRight 4s;}
-.hua_bot_list #fixed:last-child{animation:bounceInLeft 4s;}
+.hua_bot_list #fixed3:first-child{animation:bounceInRight 4s;}
+.hua_bot_list #fixed3:last-child{animation:bounceInLeft 4s;}
 /*运输 、礼品、 服务、 优惠券相关样式*/
 .index_yun_li_fu_you{
 	width:100%;height:140px;
@@ -478,7 +478,7 @@
 	color:#bababa;
 }
 /* 滚动条到达指定位置执行的动画  */
-.index_yun_li_fu_you #fixed:first-child{animation:bounceInLeft 2s;}
-.index_yun_li_fu_you #fixed:nth-child(2){animation:bounceInLeft 3s;}
-.index_yun_li_fu_you #fixed:nth-child(3){animation:bounceInLeft 4s;}
-.index_yun_li_fu_you #fixed:last-child{animation:bounceInLeft 5s;}
+.index_yun_li_fu_you #fixed4:first-child{animation:bounceInLeft 2s;}
+.index_yun_li_fu_you #fixed4:nth-child(2){animation:bounceInLeft 3s;}
+.index_yun_li_fu_you #fixed4:nth-child(3){animation:bounceInLeft 4s;}
+.index_yun_li_fu_you #fixed4:last-child{animation:bounceInLeft 5s;}

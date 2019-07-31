@@ -1,23 +1,19 @@
  // 按钮添加商品数量功能
- (function(){
-    // 找到添加按钮元素
-    var inputs=document.querySelectorAll("#box>.individual_sec>.individual_sec_l>.sum>.shop>.add>input");
-    // 遍历每个按钮元素
-    for(var input of inputs){
+ $(function(){
+     // 遍历每个按钮元素
+    for(var input of $(":input")){
         // 绑定事件
-        input.onclick=function(){
+        input.click(function(){
             var input=this;
-            // 找到修改的元素
-            var midInput=input.parentNode.children[1];
             // 如果添加按钮是+就自增，否则如果商品数量在大于1的情况下自减
-            if(input.value=="+"){
-                midInput.value++;
-            }else if(midInput.value>1){
-                midInput.value--;
+            if(input.val()=="+"){
+                $(":text").val()++;
+            }else if(input.val()>1){
+                $(":text").val()--;
             }
-        }
+        })
     }
-})();
+});
 
 
 
@@ -34,17 +30,25 @@ $(function(){
         success:function(result){
             console.log(result);
            var [{title, img, price, url, pic}]=result;
-                new Vue({
-                el:"#individual_sec_l",
-                    data:{
-                    title, 
-                    img, 
-                    price, 
-                    url, 
-                    pic
-                }
-            })
-            console.log(title);
+            var  html=`<img src="${img}" alt="图片已损坏">
+               <img src="${img}" alt="图片已损坏">`;
+               document.getElementById("con").innerHTML=html;
+            var html1=`<h3>${title}</h3>
+            <h2 >¥${price.toFixed(2)}</h2>
+            <p>商品编号： 004007</p>
+            <p>
+               <span>分类：</span>
+               <a href="product.html">所有商品</a>
+            </p>
+            <span class="shop">
+                 <button>加入购物车</button>
+                 <span class="add">
+                     <input type="button" value="－">
+                     <input type="text"value="1">
+                     <input type="button" value="+">
+                 </span>
+           </span>`;
+           document.getElementById("sum").innerHTML=html1;
         }
       })
     }

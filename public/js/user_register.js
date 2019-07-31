@@ -43,13 +43,14 @@ $(function(){
         // 发送ajax请求
     $("button").click(function(){
         $.ajax({
-            url: "http://localhost:8080//user/v5/register",
+            url: "http://localhost:8080/user/v5/register",
             type:"post",
+            data:"uname="+uname.value+"&upwd="+upwd.value+"&email="+email.value+"&phone="+phone.value+"&avatar="+file.value+"&user_name="+user_name.value+"&gender="+(sex.checked?gender=1:gender=0),
             dataType:"json", //自动将json转为js可用的对象
             success:function(result){//result就是服务器端返回的结果
                 if(result==1){
                     alert("注册成功");
-                    window.location.href="http://localhost:8080/index.html"
+                    window.location.href="http://localhost:8080/user_login.html"
                 }else{
                     alert("注册失败");
                 }
@@ -57,7 +58,6 @@ $(function(){
         })
     });
 });
-
 
 
 

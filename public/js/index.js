@@ -1,7 +1,87 @@
- // 页面滚动条带动的页面动画功能
- (function () {
+ // 用ajax动态请求数据
+ $(function(){
+    $.ajax({
+      url:"http://localhost:8080/index",
+      type:"get",
+      dataType:"json",
+      success:function(result){
+          var {fresh,decoration}=result;
+          var [p1, p2, p3,p4]=fresh;
+          var [sp1,sp2,sp3,sp4]=decoration;
+        // var {title, img, price, href, pic}=p1;
+          var html=`<div class="xingshanping" data-target="tab">
+        <span><a href="${p1.url}"><img src="${p1.img}"  alt="图片已损坏"></a></span>
+        <span>${p1.title}</span>
+        <span>¥${p1.price.toFixed(2)}</span>
+    </div>
+    <div data-target="tab">
+        <span><a href="${p2.url}"><img src="${p2.img}"  alt="图片已损坏"></a></span>
+        <span>${p2.title}</span>
+        <span>¥${p2.price.toFixed(2)}</span>
+    </div>
+    <div data-target="tab">
+        <span><a href="${p3.url}"><img src="${p3.img}" alt="图片已损坏"></a></span>
+        <span>${p3.title}</span>
+        <span>¥${p3.price.toFixed(2)}</span>
+    </div>
+    <div data-target="tab">
+        <span><a href="${p4.url}"><img src="${p4.img}" alt="图片已损坏"></a></span>
+        <span>${p4.title}</span>
+        <span>¥${p4.price.toFixed(2)}</span>
+    </div>`;
+       document.getElementById("xingshanpingBOX").innerHTML=html;
+       html1=`<div class="jiayuanbox" data-target="tab">
+       <span>
+           <a href="${sp1.url}">
+               <img src="${sp1.img}" alt="图片已损坏" />
+           </a>
+       </span>
+       <ul>
+           <li>${sp1.title}</li>
+           <li>¥${sp1.price.toFixed(2)}</li>
+       </ul>
+   </div>
+   <div class="jiayuanbox" data-target="tab">
+       <ul>
+           <li>${sp2.title}</li>
+           <li>¥${sp2.price.toFixed(2)}</li>
+       </ul>
+       <span>
+           <a href="${sp2.url}">
+               <img src="${sp2.img}" alt="图片已损坏" />
+           </a>
+       </span>
+   </div>
+   <div class="jiayuanbox" data-target="tab">
+       <span>
+           <a href="${sp3.url}">
+               <img src="${sp3.img}" alt="图片已损坏" />
+           </a>
+       </span>
+       <ul>
+           <li>${sp3.title}</li>
+           <li>¥${sp3.price.toFixed(2)}</li>
+       </ul>
+   </div>
+   <div class="jiayuanbox" data-target="tab">
+       <ul>
+           <li>${sp4.title}</li>
+           <li>¥${sp4.price.toFixed(2)}</li>
+       </ul>
+       <span>
+           <a href="${sp4.url}">
+               <img src="${sp4.img}" alt="图片已损坏" />
+           </a>
+       </span>
+   </div>`;
+   document.getElementById("jiayuan").innerHTML=html1;
+      }  
+    })
+    
+  });
+ // 页面滚动条带动的页面动
     //页面加载时候
-    window.onload = function () {
+    $(window).load(function(){
         //获取元素 
         // 获取推荐图元素  
         var imgs = document.querySelectorAll("#box .tuijian [data-target=tab]");
@@ -27,53 +107,54 @@
             img.className = "fixed";
         }
         //绑定事件滚动事件
-        window.onscroll = function () {
+        window.onscroll = function(){
             //获取滚动条滚动过的距离
             var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
             // 当滚动到<指定位置>时
-            if (scrollTop >= 540) {
+            if (scrollTop >=350) {
                 //遍历每个上新商品图元素
                 for (var xinping of xinpings) {
                     //给今日上新商品图元素添加类:className
-                    xinping.className = "fixed";
+                    xinping.className = "fixed1";
                 }
             }
-            if (scrollTop >= 1040) {
+            if (scrollTop >= 800) {
                 //遍历每个限时商品元素
                 for (var xianshibox of xianshiboxs) {
                     //给限时商品图元素添加id;
                     xianshibox.id = "fixed";
                 }
             }
-            if (scrollTop >= 1700) {
+            if (scrollTop >= 1400) {
                 //给花语的概括介绍文本的元素添加id;
-                text.id = "fixed";
+                text.id = "fixed1";
             }
-            if (scrollTop >= 2000) {
+            if (scrollTop >= 1800) {
                 //遍历每个家园商品元素
                 for (var jiayuan of jiayuans) {
                     //给限时商品图元素添加id;
-                    jiayuan.id = "fixed";
+                    jiayuan.id = "fixed2";
                 }
             }
             if (scrollTop >= 2500) {
                 //遍历花语门店的活动及概要样式的左右两边元素
                 for (var hua_bot_list of hua_bot_lists) {
                     //给花语门店的活动及概要样式元素添加id;
-                    hua_bot_list.id = "fixed";
+                    hua_bot_list.id = "fixed3";
                 }
             }
             if (scrollTop >= 2950) {
                 //遍历运输 、礼品、 服务、 优惠券相关元素
                 for (var index_yun_li_fu_you of index_yun_li_fu_yous) {
                     //给运输 、礼品、 服务、 优惠券相关元素添加id;
-                    index_yun_li_fu_you.id = "fixed";
+                    index_yun_li_fu_you.id = "fixed4";
                 }
             }
         }
 
-    }
-})();
+    };
+
+
 
 
 // 轮播图功能
@@ -232,33 +313,3 @@
     },1000);
 })();
 
-
-// 用ajax动态请求数据
-$(function(){
-    $.ajax({
-      url:"http://localhost:8080/index",
-      type:"get",
-      dataType:"json",
-      success:function(result){
-          var {fresh,decoration}=result;
-        var [p1, p2, p3,p4]=fresh;
-        var [sp1,sp2,sp3,sp4]=decoration;
-        // var {title, img, price, href, pic}=p1;
-        new Vue({
-            el:"#box",
-            data:{
-              p1,
-              p2,
-              p3,
-              p4,
-              sp1,
-              sp2,
-              sp3,
-              sp4
-            }
-        })
-      }  
-    })
-    
-  });
-  
